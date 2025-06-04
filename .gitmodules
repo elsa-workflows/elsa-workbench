@@ -1,3 +1,6 @@
 [submodule "src/core"]
 	path = src/core
 	url = https://github.com/elsa-workflows/elsa-core.git
+[submodule "src/extensions"]
+	path = src/extensions
+	url = https://github.com/elsa-workflows/elsa-extensions.git

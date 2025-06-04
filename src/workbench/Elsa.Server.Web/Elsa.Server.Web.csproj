@@ -6,10 +6,6 @@
     </PropertyGroup>
     
     <ItemGroup>
-        <PackageReference Include="Elsa" />
-        <PackageReference Include="Elsa.Common" />
-        <PackageReference Include="Elsa.Tenants" />
-        <PackageReference Include="Elsa.Tenants.AspNetCore" />
         <PackageReference Include="JetBrains.Annotations" />
     </ItemGroup>
 
