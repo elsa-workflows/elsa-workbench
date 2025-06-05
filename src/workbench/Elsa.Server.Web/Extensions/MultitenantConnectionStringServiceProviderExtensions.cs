@@ -1,5 +1,8 @@
+using System;
 using Elsa.Common.Multitenancy;
 using Elsa.Persistence.EFCore.Extensions;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Elsa.Server.Web.Extensions;
 

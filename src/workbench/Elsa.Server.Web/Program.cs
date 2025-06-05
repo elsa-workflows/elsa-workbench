@@ -1,3 +1,5 @@
+using System;
+using System.IO;
 using System.Text.Encodings.Web;
 using Elsa.Alterations.Extensions;
 using Elsa.Alterations.MassTransit.Extensions;
@@ -27,18 +29,14 @@ using Elsa.Persistence.MongoDb.Modules.Runtime;
 using Elsa.Persistence.MongoDb.Modules.Tenants;
 using Elsa.Retention.Extensions;
 using Elsa.Retention.Models;
-using Elsa.Secrets.Extensions;
-using Elsa.Secrets.Management.Tasks;
-using Elsa.Secrets.Persistence;
 using Elsa.Server.Web;
 using Elsa.Server.Web.Extensions;
 using Elsa.Server.Web.Filters;
-using Elsa.ServiceBus.Kafka;
 using Elsa.ServiceBus.MassTransit.Extensions;
 using Elsa.Sql.Extensions;
 using Elsa.Sql.MySql;
-using Elsa.Sql.Sqlite;
 using Elsa.Sql.PostgreSql;
+using Elsa.Sql.Sqlite;
 using Elsa.Sql.SqlServer;
 using Elsa.Tenants.AspNetCore;
 using Elsa.Tenants.Extensions;
@@ -63,6 +61,11 @@ using JetBrains.Annotations;
 using Medallion.Threading.FileSystem;
 using Medallion.Threading.Postgres;
 using Medallion.Threading.Redis;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -156,7 +159,6 @@ if (useManualOtelInstrumentation)
 }
 
 // Add Elsa services.
-services.AddScoped<IPropertyUIHandler, CustomCheckListOptionsProvider>();
 services
     .AddElsa(elsa =>
     {
@@ -218,7 +220,6 @@ services
             .AddActivitiesFrom<Program>()
             .AddWorkflowsFrom<Program>()
             .UseFluentStorageProvider()
-            .UseFileStorage()
             .UseIdentity(identity =>
             {
                 if (persistenceProvider == PersistenceProvider.MongoDb)
@@ -411,7 +412,6 @@ services
                     }
                 };
             })
-            .UseEnvironments(environments => environments.EnvironmentsOptions = options => configuration.GetSection("Environments").Bind(options))
             .UseScheduling(scheduling =>
             {
                 if (useHangfire)
@@ -612,45 +612,6 @@ services
             });
         }
 
-        if (useKafka)
-        {
-            elsa.UseKafka(kafka =>
-            {
-                kafka.ConfigureOptions(options => configuration.GetSection("Kafka").Bind(options));
-            });
-        }
-
-        if (useSecrets)
-        {
-            elsa
-                .UseSecrets()
-                .UseSecretsManagement(management =>
-                {
-                    management.ConfigureOptions(options => configuration.GetSection("Secrets:Management").Bind(options));
-                    if (sqlDatabaseProvider == SqlDatabaseProvider.SqlServer)
-                        management.UseEntityFrameworkCore(ef =>
-                        {
-                            ef.UseContextPooling = useDbContextPooling;
-                            ef.UseSqlServer(sqlServerConnectionString);
-                        });
-                    else if (sqlDatabaseProvider == SqlDatabaseProvider.PostgreSql)
-                        management.UseEntityFrameworkCore(ef =>
-                        {
-                            ef.UseContextPooling = useDbContextPooling;
-                            ef.UsePostgreSql(postgresConnectionString);
-                        });
-                    else
-                        management.UseEntityFrameworkCore(ef =>
-                        {
-                            ef.UseContextPooling = useDbContextPooling;
-                            ef.UseSqlite(sp => sp.GetSqliteConnectionString());
-                        });
-                })
-                .UseSecretsApi()
-                .UseSecretsScripting()
-                ;
-        }
-
         elsa.UseRetention(r =>
         {
             r.SweepInterval = TimeSpan.FromHours(5);
@@ -730,7 +691,6 @@ services
         elsa.InstallDropIns(options => options.DropInRootDirectory = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", "DropIns"));
         elsa.AddSwagger();
         elsa.AddFastEndpointsAssembly<Program>();
-        ConfigureForTest?.Invoke(elsa);
     });
 
 // Obfuscate HTTP request headers.
@@ -741,7 +701,6 @@ services.Configure<RecurringTaskOptions>(options =>
 {
     options.Schedule.ConfigureTask<TriggerBookmarkQueueRecurringTask>(TimeSpan.FromSeconds(300));
     options.Schedule.ConfigureTask<PurgeBookmarkQueueRecurringTask>(TimeSpan.FromSeconds(300));
-    options.Schedule.ConfigureTask<UpdateExpiredSecretsRecurringTask>(TimeSpan.FromHours(4));
     options.Schedule.ConfigureTask<RestartInterruptedWorkflowsTask>(TimeSpan.FromSeconds(15));
 });
 
