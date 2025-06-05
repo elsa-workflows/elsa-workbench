@@ -1,5 +1,8 @@
 <Project>
     <PropertyGroup>
+        <UseProjectReferences>true</UseProjectReferences>
+    </PropertyGroup>
+    <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <IsPackable>false</IsPackable>
@@ -8,10 +11,6 @@
     <ItemGroup>
         <PackageReference Include="JetBrains.Annotations" />
     </ItemGroup>
-
-    <PropertyGroup>
-        <UseProjectReferences>true</UseProjectReferences>
-    </PropertyGroup>
 
     <PropertyGroup Label="PackageVersions">
         <ElsaVersion>3.6.0-preview.3036</ElsaVersion>
