@@ -5,11 +5,75 @@
     </PropertyGroup>
     <ItemGroup Label="Elsa">
         <PackageVersion Include="Elsa" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Api.Client" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Api.Common" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Caching" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Common" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Expressions" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Expressions.CSharp" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Expressions.Python" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Expressions.Liquid" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Expressions.JavaScript" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Expressions.JavaScript.Libraries" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Hosting.Management" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Http" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Identity" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.KeyValues" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Mediator" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Resilience" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Resilience.Core" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.SasTokens" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Scheduling" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Tenants" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Tenants.AspNetCore" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Api" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Core" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Management" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Runtime" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Runtime.Distributed" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.WorkflowProviders.BlobStorage" Version="$(ElsaVersion)"/>
     </ItemGroup>
     <ItemGroup Label="Elsa Extensions">
+        <PackageVersion Include="Elsa.Actors.ProtoActor" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Alterations" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Alterations.Core" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Alterations.MassTransit" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Caching.Distributed" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Caching.Distributed.MassTransit" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Caching.Distributed.ProtoActor" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.DropIns" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Email" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Http.Webhooks" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Labels" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.OpenTelemetry" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.Dapper" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.Dapper.Migrations" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Persistence.EFCore" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.Common" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.MySql" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.Oracle" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.PostgreSql" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Persistence.EFCore.Sqlite" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.SqlServer" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.MongoDb" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Retention" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.ServiceBus.AzureServiceBus" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.ServiceBus.MassTransit" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.ServiceBus.MassTransit.AzureServiceBus" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.ServiceBus.MassTransit.RabbitMq" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Scheduling.Hangfire" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Scheduling.Quartz" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Scheduling.Quartz.EFCore.MySql" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Scheduling.Quartz.EFCore.PostgreSql" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Scheduling.Quartz.EFCore.Sqlite" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Scheduling.Quartz.EFCore.SqlServer" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Sql" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Sql.MySql" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Sql.PostgreSql" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Sql.Sqlite" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Sql.SqlServer" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.Workflows.Runtime.ProtoActor" Version="$(ElsaExtensionsVersion)"/>
+        <PackageVersion Include="Elsa.WorkflowContexts" Version="$(ElsaExtensionsVersion)"/>
     </ItemGroup>
     <ItemGroup Label="Elsa Studio">
         <PackageVersion Include="Elsa.Studio" Version="$(ElsaStudioVersion)"/>

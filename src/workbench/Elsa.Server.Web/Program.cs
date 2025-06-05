@@ -10,7 +10,6 @@ using Elsa.Common.RecurringTasks;
 using Elsa.DropIns.Extensions;
 using Elsa.Expressions.Helpers;
 using Elsa.Extensions;
-using Elsa.Features.Services;
 using Elsa.Identity.Multitenancy;
 using Elsa.OpenTelemetry.Middleware;
 using Elsa.Persistence.Dapper.Extensions;
@@ -57,7 +56,6 @@ using Hangfire.PostgreSql;
 using Hangfire.PostgreSql.Factories;
 using Hangfire.SqlServer;
 using Hangfire.Storage.SQLite;
-using JetBrains.Annotations;
 using Medallion.Threading.FileSystem;
 using Medallion.Threading.Postgres;
 using Medallion.Threading.Redis;
@@ -246,7 +244,7 @@ services
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.CockroachDb)
                             ef.UsePostgreSql(cockroachDbConnectionString);
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.Oracle)
-                            ef.UseOracle(oracleConnectionString, new()
+                            ef.UseOracle(oracleConnectionString, new Elsa.Persistence.EFCore.ElsaDbContextOptions()
                             {
                                 SchemaName = "ELSA"
                             });
@@ -297,7 +295,7 @@ services
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.CockroachDb)
                             ef.UsePostgreSql(cockroachDbConnectionString);
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.Oracle)
-                            ef.UseOracle(oracleConnectionString, new()
+                            ef.UseOracle(oracleConnectionString, new Elsa.Persistence.EFCore.ElsaDbContextOptions()
                             {
                                 SchemaName = "ELSA"
                             });
@@ -352,7 +350,7 @@ services
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.CockroachDb)
                             ef.UsePostgreSql(cockroachDbConnectionString);
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.Oracle)
-                            ef.UseOracle(oracleConnectionString, new()
+                            ef.UseOracle(oracleConnectionString, new Elsa.Persistence.EFCore.ElsaDbContextOptions()
                             {
                                 SchemaName = "ELSA"
                             });
@@ -505,7 +503,7 @@ services
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.CockroachDb)
                             ef.UsePostgreSql(cockroachDbConnectionString);
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.Oracle)
-                            ef.UseOracle(oracleConnectionString, new()
+                            ef.UseOracle(oracleConnectionString, new Elsa.Persistence.EFCore.ElsaDbContextOptions()
                             {
                                 SchemaName = "ELSA"
                             });
@@ -663,7 +661,7 @@ services
                                 if (sqlDatabaseProvider == SqlDatabaseProvider.Citus) ef.UsePostgreSql(citusConnectionString);
                                 if (sqlDatabaseProvider == SqlDatabaseProvider.YugabyteDb) ef.UsePostgreSql(yugabyteDbConnectionString);
                                 if (sqlDatabaseProvider == SqlDatabaseProvider.Oracle)
-                                    ef.UseOracle(oracleConnectionString, new()
+                                    ef.UseOracle(oracleConnectionString, new Elsa.Persistence.EFCore.ElsaDbContextOptions()
                                     {
                                         SchemaName = "ELSA"
                                     });
