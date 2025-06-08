@@ -71,7 +71,6 @@ const WorkflowRuntime workflowRuntime = WorkflowRuntime.Distributed;
 const DistributedCachingTransport distributedCachingTransport = DistributedCachingTransport.MassTransit;
 const bool useMultitenancy = false;
 const bool useTenantsFromConfiguration = true;
-const bool disableVariableWrappers = false;
 
 ObjectConverter.StrictMode = true;
 
@@ -344,21 +343,10 @@ services
             })
             .UseCSharp(options =>
             {
-                options.DisableWrappers = disableVariableWrappers;
                 options.AppendScript("string Greet(string name) => $\"Hello {name}!\";");
                 options.AppendScript("string SayHelloWorld() => Greet(\"World\");");
             })
-            //.UseJavaScript(options =>
-            //{
-            //    options.AllowClrAccess = true;
-            //    options.DisableWrappers = disableVariableWrappers;
-            //    options.DisableVariableCopying = disableVariableCopying;
-            //    options.ConfigureEngine(engine =>
-            //    {
-            //        engine.Execute("function greet(name) { return `Hello ${name}!`; }");
-            //        engine.Execute("function sayHelloWorld() { return greet('World'); }");
-            //    });
-            //})
+            .UseJavaScript(options => options.AllowClrAccess = true)
             .UsePython(python =>
             {
                 python.PythonOptions += options =>
