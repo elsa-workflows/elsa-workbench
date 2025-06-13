@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{F9AA7C5F-9
 	ProjectSection(SolutionItems) = preProject
 		src\core\Directory.Build.props = src\core\Directory.Build.props
 		src\core\Directory.Packages.props = src\core\Directory.Packages.props
+		src\core\.github\workflows\packages.yml = src\core\.github\workflows\packages.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa", "src\core\src\modules\Elsa\Elsa.csproj", "{277EF427-127D-4FC6-950C-496338804BD1}"
@@ -81,6 +82,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", 
 		src\extensions\Directory.Build.props = src\extensions\Directory.Build.props
 		src\extensions\Directory.Packages.props = src\extensions\Directory.Packages.props
 		src\extensions\.build\ElsaCore.ProjectReferences.targets = src\extensions\.build\ElsaCore.ProjectReferences.targets
+		src\extensions\.github\workflows\packages.yml = src\extensions\.github\workflows\packages.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Caching.Distributed", "src\extensions\src\modules\caching\Elsa.Caching.Distributed\Elsa.Caching.Distributed.csproj", "{9F9620A1-BC83-4DD9-950D-4D7DB0B78F1E}"

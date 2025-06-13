@@ -1,6 +1,6 @@
 <Project>
     <PropertyGroup>
-        <UseProjectReferences>false</UseProjectReferences>
+        <UseProjectReferences>true</UseProjectReferences>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
@@ -13,8 +13,8 @@
     </ItemGroup>
 
     <PropertyGroup Label="PackageVersions">
-        <ElsaVersion>3.6.0-preview.3036</ElsaVersion>
-        <ElsaExtensionsVersion>3.6.0-preview.54</ElsaExtensionsVersion>
+        <ElsaVersion>3.7.0-preview.3055</ElsaVersion>
+        <ElsaExtensionsVersion>3.7.0-preview.64</ElsaExtensionsVersion>
         <ElsaStudioVersion>3.6.0-preview.1029</ElsaStudioVersion>
     </PropertyGroup>
 </Project>
