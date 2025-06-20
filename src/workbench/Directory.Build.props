@@ -16,5 +16,6 @@
         <ElsaVersion>3.7.0-preview.3055</ElsaVersion>
         <ElsaExtensionsVersion>3.7.0-preview.64</ElsaExtensionsVersion>
         <ElsaStudioVersion>3.6.0-preview.1029</ElsaStudioVersion>
+        <MicrosoftVersion>9.0.6</MicrosoftVersion>
     </PropertyGroup>
 </Project>
