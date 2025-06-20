@@ -4,3 +4,6 @@
 [submodule "src/extensions"]
 	path = src/extensions
 	url = https://github.com/elsa-workflows/elsa-extensions.git
+[submodule "src/studio"]
+	path = src/studio
+	url = https://github.com/elsa-workflows/elsa-studio.git
