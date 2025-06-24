@@ -1,5 +1,6 @@
 using System.Text.Encodings.Web;
 using Elsa.Agents;
+using Elsa.Email.Models;
 using Elsa.Extensions;
 using Elsa.Persistence.EFCore.Extensions;
 using Elsa.Persistence.EFCore.Modules.Identity;
@@ -47,7 +48,11 @@ services
             .UseScheduling(scheduling => scheduling.UseQuartzScheduler())
             .UseWorkflowsApi()
             .UseCSharp()
-            .UseJavaScript(options => options.AllowClrAccess = true)
+            .UseJavaScript(options =>
+            {
+                options.AllowClrAccess = true;
+                options.ConfigureEngine(engine => engine.RegisterType(typeof(EmailAttachment)));
+            })
             .UseLiquid(liquid => liquid.FluidOptions = options => options.Encoder = HtmlEncoder.Default)
             .UseHttp(http =>
             {
@@ -68,6 +73,7 @@ services
         elsa.UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite()));
         elsa.UseAgentsApi();
         elsa.UseEmail(email => email.ConfigureOptions = options => configuration.GetSection("Smtp").Bind(options));
+        elsa.AddVariableTypeAndAlias<EmailAttachment>(nameof(EmailAttachment), "Email");
         elsa.AddFastEndpointsAssembly<Program>();
     });
 
