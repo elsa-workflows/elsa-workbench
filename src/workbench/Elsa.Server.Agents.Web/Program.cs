@@ -1,4 +1,5 @@
 using System.Text.Encodings.Web;
+using Elsa.Agents;
 using Elsa.Extensions;
 using Elsa.Persistence.EFCore.Extensions;
 using Elsa.Persistence.EFCore.Modules.Identity;
@@ -62,7 +63,10 @@ services
 
         elsa.UseMassTransit();
         elsa.UseDistributedCache(distributedCaching => distributedCaching.UseMassTransit());
-
+        elsa.UseAgents();
+        elsa.UseAgentActivities();
+        elsa.UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite()));
+        elsa.UseAgentsApi();
         elsa.AddFastEndpointsAssembly<Program>();
     });
 

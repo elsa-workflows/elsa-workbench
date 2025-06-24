@@ -15,6 +15,7 @@
         <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Login.BlazorServer\Elsa.Studio.Login.BlazorServer.csproj"/>
         <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Login\Elsa.Studio.Login.csproj"/>
         <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Workflows\Elsa.Studio.Workflows.csproj"/>
+        <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Studio.Agents\Elsa.Studio.Agents.csproj" />
     </ItemGroup>
 
 </Project>

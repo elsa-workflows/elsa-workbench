@@ -4,6 +4,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "studio", "studio", "{849E1085-B4D8-42F6-9D4A-99B7B62F66E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", "{C389E158-47E2-46BE-B32C-5A0DD3C31F2D}"
+	ProjectSection(SolutionItems) = preProject
+		..\server\extensions\.build\ElsaStudio.ProjectReferences.targets = ..\server\extensions\.build\ElsaStudio.ProjectReferences.targets
+		..\server\extensions\Directory.Build.props = ..\server\extensions\Directory.Build.props
+		..\server\extensions\Directory.Packages.props = ..\server\extensions\Directory.Packages.props
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workbench", "Elsa.Studio.Workbench\Elsa.Studio.Workbench.csproj", "{E92FA2D1-927A-4A5F-BB78-7ADBD93EDB0D}"
 EndProject
@@ -46,6 +51,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Shell", "..\client\studio\src\framework\Elsa.Studio.Shell\Elsa.Studio.Shell.csproj", "{67910C5D-CA4D-481C-B973-13679E0E0854}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Translations", "..\client\studio\src\framework\Elsa.Studio.Translations\Elsa.Studio.Translations.csproj", "{1C5BCFF7-166E-4EF5-BD3F-D7E177414306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Agents", "..\server\extensions\src\modules\agents\Elsa.Studio.Agents\Elsa.Studio.Agents.csproj", "{A10F2C8C-E108-4871-A415-2B06B8B9EA49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Models", "..\server\extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj", "{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +162,14 @@ Global
 		{1C5BCFF7-166E-4EF5-BD3F-D7E177414306}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C5BCFF7-166E-4EF5-BD3F-D7E177414306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C5BCFF7-166E-4EF5-BD3F-D7E177414306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10F2C8C-E108-4871-A415-2B06B8B9EA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10F2C8C-E108-4871-A415-2B06B8B9EA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10F2C8C-E108-4871-A415-2B06B8B9EA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10F2C8C-E108-4871-A415-2B06B8B9EA49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E92FA2D1-927A-4A5F-BB78-7ADBD93EDB0D} = {27A1CA5D-EBFE-4B91-9FC6-21BD13C282B7}
@@ -180,5 +197,7 @@ Global
 		{AB61BBBB-28DD-4DA5-827C-43129E92FC29} = {849E1085-B4D8-42F6-9D4A-99B7B62F66E8}
 		{67910C5D-CA4D-481C-B973-13679E0E0854} = {849E1085-B4D8-42F6-9D4A-99B7B62F66E8}
 		{1C5BCFF7-166E-4EF5-BD3F-D7E177414306} = {849E1085-B4D8-42F6-9D4A-99B7B62F66E8}
+		{A10F2C8C-E108-4871-A415-2B06B8B9EA49} = {C389E158-47E2-46BE-B32C-5A0DD3C31F2D}
+		{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3} = {C389E158-47E2-46BE-B32C-5A0DD3C31F2D}
 	EndGlobalSection
 EndGlobal

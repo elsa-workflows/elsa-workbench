@@ -65,6 +65,7 @@ builder.Services.AddDashboardModule();
 builder.Services.AddWorkflowsModule();
 builder.Services.AddLocalizationModule(localizationConfig);
 builder.Services.AddTranslations();
+builder.Services.AddAgentsModule(backendApiConfig);
 
 // Replace some services with other implementations.
 builder.Services.AddScoped<ITimeZoneProvider, LocalTimeZoneProvider>();
