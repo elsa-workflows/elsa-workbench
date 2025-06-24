@@ -67,6 +67,7 @@ services
         elsa.UseAgentActivities();
         elsa.UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite()));
         elsa.UseAgentsApi();
+        elsa.UseEmail(email => email.ConfigureOptions = options => configuration.GetSection("Smtp").Bind(options));
         elsa.AddFastEndpointsAssembly<Program>();
     });
 

@@ -153,6 +153,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Persistence.EFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Server.Agents.Web", "src\workbench\Elsa.Server.Agents.Web\Elsa.Server.Agents.Web.csproj", "{F2AEC4CB-5730-433F-B093-222EA1CC55C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Email", "src\server\extensions\src\modules\email\Elsa.Email\Elsa.Email.csproj", "{38A8388D-63D2-42F4-9009-68DEC191DC3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -224,6 +226,7 @@ Global
 		{9206819D-AC0B-4CD9-95BD-1A25114781EA} = {BB061A66-45B6-4390-8CA4-ED98EFFBA5D3}
 		{F66838B5-612D-4667-A3FF-EB8FA10200FC} = {BB061A66-45B6-4390-8CA4-ED98EFFBA5D3}
 		{F2AEC4CB-5730-433F-B093-222EA1CC55C5} = {5281FA74-5D7E-4701-8B5E-465DDE19E45C}
+		{38A8388D-63D2-42F4-9009-68DEC191DC3A} = {BB061A66-45B6-4390-8CA4-ED98EFFBA5D3}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{277EF427-127D-4FC6-950C-496338804BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -474,5 +477,9 @@ Global
 		{F2AEC4CB-5730-433F-B093-222EA1CC55C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2AEC4CB-5730-433F-B093-222EA1CC55C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2AEC4CB-5730-433F-B093-222EA1CC55C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A8388D-63D2-42F4-9009-68DEC191DC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A8388D-63D2-42F4-9009-68DEC191DC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A8388D-63D2-42F4-9009-68DEC191DC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A8388D-63D2-42F4-9009-68DEC191DC3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
