@@ -21,10 +21,11 @@ using Elsa.Studio.Login.Extensions;
 // Build the host.
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
+var services = builder.Services;
 
 // Register Razor services.
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor(options =>
+services.AddRazorPages();
+services.AddServerSideBlazor(options =>
 {
     options.RootComponents.RegisterCustomElsaStudioElements();
     options.RootComponents.MaxJSRootComponents = 1000;
@@ -50,25 +51,37 @@ var localizationConfig = new LocalizationConfig
     ConfigureLocalizationOptions = options =>
     {
         configuration.GetSection(LocalizationOptions.LocalizationSection).Bind(options);
-        options.SupportedCultures = new[] { options?.DefaultCulture ?? new LocalizationOptions().DefaultCulture }
-            .Concat(options?.SupportedCultures.Where(culture => culture != options?.DefaultCulture) ?? []) .ToArray();
+        options.SupportedCultures = new[] { options.DefaultCulture ?? new LocalizationOptions().DefaultCulture }
+            .Concat(options?.SupportedCultures.Where(culture => culture != options?.DefaultCulture) ?? []).ToArray();
     }
 };
 
-builder.Services.AddScoped<IBrandingProvider, StudioBrandingProvider>();
-builder.Services.AddCore().Replace(new(typeof(IBrandingProvider), typeof(StudioBrandingProvider), ServiceLifetime.Scoped));
-builder.Services.AddShell(options => configuration.GetSection("Shell").Bind(options));
-builder.Services.AddRemoteBackend(backendApiConfig);
-builder.Services.AddLoginModule();
-builder.Services.UseElsaIdentity();
-builder.Services.AddDashboardModule();
-builder.Services.AddWorkflowsModule();
-builder.Services.AddLocalizationModule(localizationConfig);
-builder.Services.AddTranslations();
-builder.Services.AddAgentsModule(backendApiConfig);
+services.AddScoped<IBrandingProvider, StudioBrandingProvider>();
+services.AddCore().Replace(new(typeof(IBrandingProvider), typeof(StudioBrandingProvider), ServiceLifetime.Scoped));
+services.AddShell(options => configuration.GetSection("Shell").Bind(options));
+services.AddRemoteBackend(backendApiConfig);
+services.AddLoginModule();
+
+var identityProvider = configuration.GetValue<string>("Authentication:Provider");
+
+switch (identityProvider)
+{
+    case "Elsa":
+        services.UseElsaIdentity();
+        break;
+    case "OAuth2":
+        services.UseOAuth2(options => configuration.GetSection("Authentication:Providers:OAuth2").Bind(options));
+        break;
+}
+
+services.AddDashboardModule();
+services.AddWorkflowsModule();
+services.AddLocalizationModule(localizationConfig);
+services.AddTranslations();
+services.AddAgentsModule(backendApiConfig);
 
 // Replace some services with other implementations.
-builder.Services.AddScoped<ITimeZoneProvider, LocalTimeZoneProvider>();
+services.AddScoped<ITimeZoneProvider, LocalTimeZoneProvider>();
 
 // Build the application.
 var app = builder.Build();
