@@ -15,8 +15,8 @@ using Elsa.Studio.Localization.Options;
 using Elsa.Studio.Translations;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Elsa.Studio.Branding;
-using Elsa.Studio.Host.Server;
 using Elsa.Studio.Login.Extensions;
+using Elsa.Studio.Workbench;
 
 // Build the host.
 var builder = WebApplication.CreateBuilder(args);

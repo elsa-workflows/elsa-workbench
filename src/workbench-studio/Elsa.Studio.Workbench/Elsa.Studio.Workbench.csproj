@@ -18,4 +18,8 @@
         <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Studio.Agents\Elsa.Studio.Agents.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="CustomThemeFeature.cs" />
+    </ItemGroup>
+
 </Project>
