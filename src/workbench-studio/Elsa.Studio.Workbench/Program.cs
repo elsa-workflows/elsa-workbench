@@ -15,7 +15,9 @@ using Elsa.Studio.Localization.Options;
 using Elsa.Studio.Translations;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Elsa.Studio.Branding;
+using Elsa.Studio.Contracts;
 using Elsa.Studio.Login.Extensions;
+using Elsa.Studio.Services;
 using Elsa.Studio.Workbench;
 
 // Build the host.
@@ -58,6 +60,7 @@ var localizationConfig = new LocalizationConfig
 
 services.AddScoped<IBrandingProvider, StudioBrandingProvider>();
 services.AddCore().Replace(new(typeof(IBrandingProvider), typeof(StudioBrandingProvider), ServiceLifetime.Scoped));
+services.AddScoped<IClientInformationProvider, StaticClientInformationProvider>();
 services.AddShell(options => configuration.GetSection("Shell").Bind(options));
 services.AddRemoteBackend(backendApiConfig);
 services.AddLoginModule();

@@ -6,6 +6,7 @@ using Elsa.Persistence.EFCore.Extensions;
 using Elsa.Persistence.EFCore.Modules.Identity;
 using Elsa.Persistence.EFCore.Modules.Management;
 using Elsa.Persistence.EFCore.Modules.Runtime;
+using Elsa.Server.Agents.Web.AI.Plugins;
 using Elsa.Workflows.Runtime.Distributed.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -76,6 +77,8 @@ services
         elsa.AddVariableTypeAndAlias<EmailAttachment>(nameof(EmailAttachment), "Email");
         elsa.AddFastEndpointsAssembly<Program>();
     });
+
+services.AddPluginProvider<CreditScorePluginProvider>();
 
 services.AddHealthChecks();
 services.AddControllers();
