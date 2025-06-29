@@ -18,15 +18,15 @@ public class CreditScorePlugin
     // For example, it could have methods to retrieve a user's credit score or to check their credit history.
     // The actual implementation details would depend on the specific requirements and the APIs available.
     [KernelFunction("get_credit_score")]
-    [return: Description("The credit score of the user")]
+    [return: Description("The credit score of the customer")]
     public async Task<int> GetCreditScoreAsync(
-        [Description("The ID of the user to get the credit score from")] string userId
+        [Description("The ID of the user to get the credit score from")] string customerId
     )
     {
         // Simulate an asynchronous operation to get a credit score.
         await Task.Delay(1000); // Simulating network delay
 
-        return userId switch
+        return customerId switch
         {
             "1" => 750,
             "2" => 650,

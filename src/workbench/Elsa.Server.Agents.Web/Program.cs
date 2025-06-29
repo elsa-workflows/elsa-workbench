@@ -79,6 +79,8 @@ services
     });
 
 services.AddPluginProvider<CreditScorePluginProvider>();
+services.AddPluginProvider<EmailPluginProvider>();
+services.AddPluginProvider<CustomerPluginProvider>();
 
 services.AddHealthChecks();
 services.AddControllers();
