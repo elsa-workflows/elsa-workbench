@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Text.Encodings.Web;
+using Elsa.Alterations.Extensions;
+using Elsa.Alterations.MassTransit.Extensions;
 using Elsa.Caching.Options;
 using Elsa.Common.Codecs;
 using Elsa.Common.DistributedHosting.DistributedLocks;
@@ -475,6 +477,7 @@ services
             });
         }
 
+        elsa.UseAlterations(alterations => alterations.UseMassTransitDispatcher());
         elsa.UseWebhooks(webhooks => webhooks.ConfigureSinks += options => builder.Configuration.GetSection("Webhooks").Bind(options));
         elsa.AddSwagger();
         elsa.AddFastEndpointsAssembly<Program>();

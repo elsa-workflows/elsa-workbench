@@ -50,6 +50,13 @@
         <ProjectReference Include="..\..\server\core\src\modules\Elsa\Elsa.csproj"/>
 
         <!-- Extension project references -->
+        <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Agents.Activities\Elsa.Agents.Activities.csproj"/>
+        <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Agents.Api\Elsa.Agents.Api.csproj"/>
+        <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Agents.Core\Elsa.Agents.Core.csproj"/>
+        <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj"/>
+        <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.Sqlite\Elsa.Agents.Persistence.EFCore.Sqlite.csproj"/>
+        <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore\Elsa.Agents.Persistence.EFCore.csproj"/>
+        <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Agents.Persistence\Elsa.Agents.Persistence.csproj"/>
         <ProjectReference Include="..\..\server\extensions\src\modules\alterations\Elsa.Alterations.Core\Elsa.Alterations.Core.csproj"/>
         <ProjectReference Include="..\..\server\extensions\src\modules\alterations\Elsa.Alterations.MassTransit\Elsa.Alterations.MassTransit.csproj"/>
         <ProjectReference Include="..\..\server\extensions\src\modules\alterations\Elsa.Alterations\Elsa.Alterations.csproj"/>
