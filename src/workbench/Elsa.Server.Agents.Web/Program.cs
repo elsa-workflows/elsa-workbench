@@ -1,4 +1,5 @@
 using System.Text.Encodings.Web;
+using Elsa.Agents;
 using Elsa.Extensions;
 using Elsa.Persistence.EFCore.Extensions;
 using Elsa.Persistence.EFCore.Modules.Identity;
@@ -16,7 +17,6 @@ var configuration = builder.Configuration;
 var identitySection = configuration.GetSection("Identity");
 var identityTokenSection = identitySection.GetSection("Tokens");
 
-// Add Elsa services.
 services
     .AddElsa(elsa =>
     {
@@ -62,7 +62,10 @@ services
 
         elsa.UseMassTransit();
         elsa.UseDistributedCache(distributedCaching => distributedCaching.UseMassTransit());
-
+        elsa.UseAgents();
+        elsa.UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite()));
+        elsa.UseAgentActivities();
+        elsa.UseAgentsApi();
         elsa.AddFastEndpointsAssembly<Program>();
     });
 
