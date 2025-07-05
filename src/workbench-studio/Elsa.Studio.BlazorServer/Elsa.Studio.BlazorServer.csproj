@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\app.css" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\client\studio\src\framework\Elsa.Studio.Core.BlazorServer\Elsa.Studio.Core.BlazorServer.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\framework\Elsa.Studio.Core\Elsa.Studio.Core.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\framework\Elsa.Studio.Shared\Elsa.Studio.Shared.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\framework\Elsa.Studio.Shell\Elsa.Studio.Shell.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\framework\Elsa.Studio.Translations\Elsa.Studio.Translations.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Dashboard\Elsa.Studio.Dashboard.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Localization.BlazorServer\Elsa.Studio.Localization.BlazorServer.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Localization\Elsa.Studio.Localization.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Login.BlazorServer\Elsa.Studio.Login.BlazorServer.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Login\Elsa.Studio.Login.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Security\Elsa.Studio.Security.csproj" />
+      <ProjectReference Include="..\..\client\studio\src\modules\Elsa.Studio.Workflows\Elsa.Studio.Workflows.csproj" />
+      <ProjectReference Include="..\..\server\core\src\clients\Elsa.Api.Client\Elsa.Api.Client.csproj" />
+      <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj" />
+      <ProjectReference Include="..\..\server\extensions\src\modules\agents\Elsa.Studio.Agents\Elsa.Studio.Agents.csproj" />
+    </ItemGroup>
+
+</Project>
