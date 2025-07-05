@@ -63,6 +63,7 @@
         <ProjectReference Include="..\..\server\extensions\src\modules\caching\Elsa.Caching.Distributed.MassTransit\Elsa.Caching.Distributed.MassTransit.csproj"/>
         <ProjectReference Include="..\..\server\extensions\src\modules\caching\Elsa.Caching.Distributed\Elsa.Caching.Distributed.csproj"/>
         <ProjectReference Include="..\..\server\extensions\src\modules\diagnostics\Elsa.OpenTelemetry\Elsa.OpenTelemetry.csproj"/>
+        <ProjectReference Include="..\..\server\extensions\src\modules\email\Elsa.Email\Elsa.Email.csproj" />
         <ProjectReference Include="..\..\server\extensions\src\modules\http\Elsa.Http.Webhooks\Elsa.Http.Webhooks.csproj"/>
         <ProjectReference Include="..\..\server\extensions\src\modules\labels\Elsa.Labels\Elsa.Labels.csproj"/>
         <ProjectReference Include="..\..\server\extensions\src\modules\persistence\Elsa.Persistence.Dapper.Migrations\Elsa.Persistence.Dapper.Migrations.csproj"/>
