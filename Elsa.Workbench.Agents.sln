@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{B8
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
 		docker-compose.yml = docker-compose.yml
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Features", "src\server\core\src\common\Elsa.Features\Elsa.Features.csproj", "{843679B9-70FB-4FC3-BAC4-1A3842E9ACD0}"
@@ -160,8 +161,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "setup", "setup", "{BFEFE7F1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "oracle", "oracle", "{2B962AD6-A0A8-4CAB-99E7-FA8E67031334}"
 	ProjectSection(SolutionItems) = preProject
-		setup\oracle\setup.sql = setup\oracle\setup.sql
+		docker\setup\oracle\setup.sql = docker\setup\oracle\setup.sql
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{8B8BBD97-893E-43BA-8098-26A66BD4C469}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -235,8 +238,9 @@ Global
 		{F66838B5-612D-4667-A3FF-EB8FA10200FC} = {BB061A66-45B6-4390-8CA4-ED98EFFBA5D3}
 		{F2AEC4CB-5730-433F-B093-222EA1CC55C5} = {5281FA74-5D7E-4701-8B5E-465DDE19E45C}
 		{38A8388D-63D2-42F4-9009-68DEC191DC3A} = {BB061A66-45B6-4390-8CA4-ED98EFFBA5D3}
-		{BFEFE7F1-D77E-4166-8DE0-47524AE88820} = {B84481B6-9E04-4BEF-BDF7-5C2280ACD34D}
 		{2B962AD6-A0A8-4CAB-99E7-FA8E67031334} = {BFEFE7F1-D77E-4166-8DE0-47524AE88820}
+		{8B8BBD97-893E-43BA-8098-26A66BD4C469} = {B84481B6-9E04-4BEF-BDF7-5C2280ACD34D}
+		{BFEFE7F1-D77E-4166-8DE0-47524AE88820} = {8B8BBD97-893E-43BA-8098-26A66BD4C469}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{277EF427-127D-4FC6-950C-496338804BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
