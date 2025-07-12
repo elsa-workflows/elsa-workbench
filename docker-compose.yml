@@ -35,16 +35,16 @@
       - mysql_data3:/var/lib/mysql
         
   oracle:
-      image: container-registry.oracle.com/database/free:latest
-      container_name: oracle-db
+      image: container-registry.oracle.com/database/free:latest-lite
       environment:
+        ORACLE_PDB: FREEPDB1
         ORACLE_PWD: elsa
       ports:
         - "1521:1521"
         - "5500:5500"
       volumes:
-        - ./data/oracle-data:/opt/oracle/oradata
-        - ./setup/oracle:/opt/oracle/scripts/setup
+        - ./docker/data/oracle-data:/opt/oracle/oradata
+        - ./docker/setup/oracle:/opt/oracle/scripts/setup
   
   mongodb:
     image: mongo:latest
