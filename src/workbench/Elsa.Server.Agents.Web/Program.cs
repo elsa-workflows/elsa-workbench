@@ -76,14 +76,14 @@ services
 
         elsa.UseQuartz(quartz =>
         {
-            quartz.UseSqlite();
+            quartz.UseSqlite(sqliteConnectionString);
         });
 
         elsa.UseMassTransit();
         elsa.UseDistributedCache(distributedCaching => distributedCaching.UseMassTransit());
         elsa.UseAgents();
         elsa.UseAgentActivities();
-        elsa.UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite()));
+        elsa.UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sqliteConnectionString)));
         elsa.UseAgentsApi();
         elsa.UseEmail(email => email.ConfigureOptions = options => configuration.GetSection("Smtp").Bind(options));
         elsa.AddVariableTypeAndAlias<EmailAttachment>(nameof(EmailAttachment), "Email");
