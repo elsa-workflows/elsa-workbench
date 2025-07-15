@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", 
 	ProjectSection(SolutionItems) = preProject
 		src\server\extensions\Directory.Build.props = src\server\extensions\Directory.Build.props
 		src\server\extensions\Directory.Packages.props = src\server\extensions\Directory.Packages.props
+		src\server\extensions\.build\ElsaCore.ProjectReferences.targets = src\server\extensions\.build\ElsaCore.ProjectReferences.targets
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Api.Client", "src\server\core\src\clients\Elsa.Api.Client\Elsa.Api.Client.csproj", "{A716D593-CB78-4C24-8416-9BBB3843E66A}"
@@ -74,6 +75,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A8C29016-B4CC-4545-93A0-447D8FDB4AFF}"
 	ProjectSection(SolutionItems) = preProject
 		src\client\studio\src\Directory.Build.props = src\client\studio\src\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{D8FC7D65-FB48-4068-B450-B788EE2E25F9}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
 Global

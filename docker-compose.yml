@@ -1,0 +1,83 @@
+﻿services:
+  postgres:
+    image: postgres:latest
+    command: -c 'max_connections=2000'
+    environment:
+      POSTGRES_USER: elsa
+      POSTGRES_PASSWORD: elsa
+      POSTGRES_DB: elsa
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+        
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=!Elsa2025@
+    ports:
+      - 1433:1433
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+        
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: elsa
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data3:/var/lib/mysql
+        
+  oracle:
+      image: container-registry.oracle.com/database/free:latest-lite
+      environment:
+        ORACLE_PDB: FREEPDB1
+        ORACLE_PWD: elsa
+      ports:
+        - "1521:1521"
+        - "5500:5500"
+      volumes:
+        - ./docker/data/oracle-data:/opt/oracle/oradata
+        - ./docker/setup/oracle:/opt/oracle/scripts/setup
+  
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+  
+  rabbitmq:
+    image: "rabbitmq:4-management"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  
+  redis:
+    image: redis:latest
+    ports:
+      - "127.0.0.1:6379:6379"
+        
+  smtp4dev: # Mock SMTP server
+    image: rnwood/smtp4dev
+    container_name: smtp4dev
+    restart: always
+    ports:
+      - "3000:80"    # Web interface
+      - "2525:25"    # SMTP port
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+      - Logging__LogLevel__Default=Information
+        
+volumes:
+  sqlserver_data:
+  postgres-data:
+  oracle-data-free1:
+  mysql_data3:
+  mongodb_data:
