@@ -1,6 +1,6 @@
 <Project>
     <PropertyGroup>
-        <UseProjectReferences>true</UseProjectReferences>
+        <UseProjectReferences>false</UseProjectReferences>
     </PropertyGroup>
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
