@@ -166,8 +166,4 @@
         <PackageReference Include="Elsa.WorkflowContexts" />
     </ItemGroup>
 
-    <ItemGroup>
-        <Folder Include="App_Data\"/>
-    </ItemGroup>
-
 </Project>
