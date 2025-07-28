@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Server.Web", "src\workbench\server\Elsa.Server.Web\Elsa.Server.Web.csproj", "{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{B84481B6-9E04-4BEF-BDF7-5C2280ACD34D}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.targets = Directory.Build.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4D1E8F17-05A2-40CA-A0D3-840DFDD78B36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{38E12C7C-D49B-44E3-BC2B-54BDA5B9F7E9}"
+	ProjectSection(SolutionItems) = preProject
+		src\workbench\server\Directory.Build.props = src\workbench\server\Directory.Build.props
+		src\workbench\server\Directory.Packages.props = src\workbench\server\Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "studio", "studio", "{7B5F677E-7269-4B65-B5E2-06864F5BC639}"
+	ProjectSection(SolutionItems) = preProject
+		src\workbench\studio\Directory.Build.props = src\workbench\studio\Directory.Build.props
+		src\workbench\studio\Directory.Packages.props = src\workbench\studio\Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Web", "src\workbench\studio\Elsa.Studio.Web\Elsa.Studio.Web.csproj", "{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13929FCA-1870-4BA1-8C47-8DC384FC9C3F} = {38E12C7C-D49B-44E3-BC2B-54BDA5B9F7E9}
+		{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7} = {7B5F677E-7269-4B65-B5E2-06864F5BC639}
+		{38E12C7C-D49B-44E3-BC2B-54BDA5B9F7E9} = {4D1E8F17-05A2-40CA-A0D3-840DFDD78B36}
+		{7B5F677E-7269-4B65-B5E2-06864F5BC639} = {4D1E8F17-05A2-40CA-A0D3-840DFDD78B36}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

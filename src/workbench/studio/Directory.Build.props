@@ -12,10 +12,6 @@
         <MicrosoftVersion>9.0.7</MicrosoftVersion>
     </PropertyGroup>
 
-    <PropertyGroup>
-        <UseProjectReferences>false</UseProjectReferences>
-    </PropertyGroup>
-
     <ItemGroup>
         <PackageReference Include="JetBrains.Annotations" />
     </ItemGroup>
