@@ -4,6 +4,3 @@
 [submodule "src/server/extensions"]
 	path = src/server/extensions
 	url = https://github.com/elsa-workflows/elsa-extensions.git
-[submodule "src/client/studio"]
-	path = src/client/studio
-	url = https://github.com/elsa-workflows/elsa-studio.git
