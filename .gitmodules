@@ -1,3 +1,0 @@
-[submodule "src/server/extensions"]
-	path = src/server/extensions
-	url = https://github.com/elsa-workflows/elsa-extensions.git
