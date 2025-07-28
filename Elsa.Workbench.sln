@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{F9AA7C5F-9
 		src\core\Directory.Packages.props = src\core\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa", "src\core\src\modules\Elsa\Elsa.csproj", "{277EF427-127D-4FC6-950C-496338804BD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa", "src\repos\elsa-core\src\modules\Elsa\Elsa.csproj", "{277EF427-127D-4FC6-950C-496338804BD1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Workflows.Runtime", "src\core\src\modules\Elsa.Workflows.Runtime\Elsa.Workflows.Runtime.csproj", "{FC44A9AF-8FD1-481D-8927-604C654745E5}"
 EndProject
