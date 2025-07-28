@@ -1,0 +1,9 @@
+[submodule "submodules/elsa-core"]
+	path = submodules/elsa-core
+	url = https://github.com/elsa-workflows/elsa-core.git
+[submodule "submodules/elsa-studio"]
+	path = submodules/elsa-studio
+	url = https://github.com/elsa-workflows/elsa-studio.git
+[submodule "submodules/elsa-extensions"]
+	path = submodules/elsa-extensions
+	url = https://github.com/elsa-workflows/elsa-extensions.git
