@@ -1,9 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workbench", "workbench", "{5281FA74-5D7E-4701-8B5E-465DDE19E45C}"
-	ProjectSection(SolutionItems) = preProject
-		NuGet.Config = NuGet.Config
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Server.Web", "src\workbench\server\Elsa.Server.Web\Elsa.Server.Web.csproj", "{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}"
 EndProject
@@ -170,6 +167,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "repos", "repos", "{A9A6AA1E-4EC2-4D90-AA60-DE0322CF1E56}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{38E12C7C-D49B-44E3-BC2B-54BDA5B9F7E9}"
+	ProjectSection(SolutionItems) = preProject
+		src\workbench\server\Directory.Build.props = src\workbench\server\Directory.Build.props
+		src\workbench\server\Directory.Packages.props = src\workbench\server\Directory.Packages.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

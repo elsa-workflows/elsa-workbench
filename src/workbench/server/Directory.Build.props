@@ -1,11 +1,14 @@
 <Project>
     <PropertyGroup>
-        <UseProjectReferences>false</UseProjectReferences>
-    </PropertyGroup>
-    <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <IsPackable>false</IsPackable>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <ElsaVersion>3.6.0-preview.3192</ElsaVersion>
+        <ElsaStudioVersion>3.6.0-preview.1165</ElsaStudioVersion>
+        <ElsaExtensionsVersion>3.6.0-preview.113</ElsaExtensionsVersion>
     </PropertyGroup>
 
     <ItemGroup>
