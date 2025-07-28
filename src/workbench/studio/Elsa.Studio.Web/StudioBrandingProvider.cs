@@ -1,6 +1,6 @@
 ﻿using Elsa.Studio.Branding;
 
-namespace Elsa.Studio.Workbench
+namespace Elsa.Studio.Web
 {
     /// <inheritdoc />
     public class StudioBrandingProvider : DefaultBrandingProvider

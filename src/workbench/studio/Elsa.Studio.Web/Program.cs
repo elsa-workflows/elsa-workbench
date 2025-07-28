@@ -18,7 +18,7 @@ using Elsa.Studio.Branding;
 using Elsa.Studio.Contracts;
 using Elsa.Studio.Login.Extensions;
 using Elsa.Studio.Services;
-using Elsa.Studio.Workbench;
+using Elsa.Studio.Web;
 
 // Build the host.
 var builder = WebApplication.CreateBuilder(args);

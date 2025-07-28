@@ -180,7 +180,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "studio", "studio", "{7B5F67
 		src\workbench\studio\Directory.Packages.props = src\workbench\studio\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workbench", "src\workbench\studio\Elsa.Studio.Workbench\Elsa.Studio.Workbench.csproj", "{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Web", "src\workbench\studio\Elsa.Studio.Web\Elsa.Studio.Web.csproj", "{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio", "src\repos\studio\src\bundles\Elsa.Studio\Elsa.Studio.csproj", "{C8BFE872-81CE-4063-8CCF-9DFFD35F75AE}"
 EndProject
