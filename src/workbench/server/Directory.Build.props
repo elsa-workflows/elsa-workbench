@@ -9,6 +9,7 @@
         <ElsaVersion>3.6.0-preview.3192</ElsaVersion>
         <ElsaStudioVersion>3.6.0-preview.1165</ElsaStudioVersion>
         <ElsaExtensionsVersion>3.6.0-preview.113</ElsaExtensionsVersion>
+        <MicrosoftVersion>9.0.7</MicrosoftVersion>
     </PropertyGroup>
 
     <ItemGroup>

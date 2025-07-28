@@ -77,7 +77,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", 
 	ProjectSection(SolutionItems) = preProject
 		src\repos\extensions\Directory.Build.props = src\repos\extensions\Directory.Build.props
 		src\repos\extensions\Directory.Packages.props = src\repos\extensions\Directory.Packages.props
-		src\repos\extensions\.build\ElsaCore.ProjectReferences.targets = src\repos\extensions\.build\ElsaCore.ProjectReferences.targets
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Actors.ProtoActor", "src\repos\extensions\src\modules\actors\Elsa.Actors.ProtoActor\Elsa.Actors.ProtoActor.csproj", "{FBBA9136-C446-4852-98B2-69F570F920BE}"
