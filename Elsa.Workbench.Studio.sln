@@ -1,67 +1,78 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workbench", "workbench", "{27A1CA5D-EBFE-4B91-9FC6-21BD13C282B7}"
 	ProjectSection(SolutionItems) = preProject
-		src\workbench\studio\Directory.Build.props = src\workbench\studio\Directory.Build.props
-		src\workbench\studio\Directory.Packages.props = src\workbench\studio\Directory.Packages.props
+		src\studio\Directory.Build.props = src\studio\Directory.Build.props
+		src\studio\Directory.Packages.props = src\studio\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "studio", "studio", "{849E1085-B4D8-42F6-9D4A-99B7B62F66E8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "elsa-studio", "elsa-studio", "{849E1085-B4D8-42F6-9D4A-99B7B62F66E8}"
 	ProjectSection(SolutionItems) = preProject
-		src\repos\studio\Directory.Packages.props = src\repos\studio\Directory.Packages.props
-		src\repos\studio\Directory.Build.props = src\repos\studio\Directory.Build.props
+		submodules\elsa-studio\Directory.Packages.props = submodules\elsa-studio\Directory.Packages.props
+		submodules\elsa-studio\Directory.Build.props = submodules\elsa-studio\Directory.Build.props
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", "{C389E158-47E2-46BE-B32C-5A0DD3C31F2D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "elsa-extensions", "elsa-extensions", "{C389E158-47E2-46BE-B32C-5A0DD3C31F2D}"
 	ProjectSection(SolutionItems) = preProject
-		src\repos\extensions\Directory.Build.props = src\repos\extensions\Directory.Build.props
-		src\repos\extensions\Directory.Packages.props = src\repos\extensions\Directory.Packages.props
+		submodules\elsa-extensions\Directory.Build.props = submodules\elsa-extensions\Directory.Build.props
+		submodules\elsa-extensions\Directory.Packages.props = submodules\elsa-extensions\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio", "src\repos\studio\src\bundles\Elsa.Studio\Elsa.Studio.csproj", "{D5C1A423-18E5-4888-90D4-77E96A9A0556}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio", "submodules\elsa-studio\src\bundles\Elsa.Studio\Elsa.Studio.csproj", "{D5C1A423-18E5-4888-90D4-77E96A9A0556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Core", "src\repos\studio\src\framework\Elsa.Studio.Core\Elsa.Studio.Core.csproj", "{3A218F5C-595F-4B77-8DF6-465CD4CFDB02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Core", "submodules\elsa-studio\src\framework\Elsa.Studio.Core\Elsa.Studio.Core.csproj", "{3A218F5C-595F-4B77-8DF6-465CD4CFDB02}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Core.BlazorServer", "src\repos\studio\src\framework\Elsa.Studio.Core.BlazorServer\Elsa.Studio.Core.BlazorServer.csproj", "{E4F97852-2CEE-4F85-BAB2-BDDFCEC3AB72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Core.BlazorServer", "submodules\elsa-studio\src\framework\Elsa.Studio.Core.BlazorServer\Elsa.Studio.Core.BlazorServer.csproj", "{E4F97852-2CEE-4F85-BAB2-BDDFCEC3AB72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.DomInterop", "src\repos\studio\src\framework\Elsa.Studio.DomInterop\Elsa.Studio.DomInterop.csproj", "{00AB2B4B-86A9-432F-A00D-13E48574D734}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.DomInterop", "submodules\elsa-studio\src\framework\Elsa.Studio.DomInterop\Elsa.Studio.DomInterop.csproj", "{00AB2B4B-86A9-432F-A00D-13E48574D734}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Localization", "src\repos\studio\src\modules\Elsa.Studio.Localization\Elsa.Studio.Localization.csproj", "{A1B2C3D4-0001-0002-0003-000000000002}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Localization", "submodules\elsa-studio\src\modules\Elsa.Studio.Localization\Elsa.Studio.Localization.csproj", "{A1B2C3D4-0001-0002-0003-000000000002}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Localization.BlazorServer", "src\repos\studio\src\modules\Elsa.Studio.Localization.BlazorServer\Elsa.Studio.Localization.BlazorServer.csproj", "{A1B2C3D4-0001-0002-0003-000000000003}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Localization.BlazorServer", "submodules\elsa-studio\src\modules\Elsa.Studio.Localization.BlazorServer\Elsa.Studio.Localization.BlazorServer.csproj", "{A1B2C3D4-0001-0002-0003-000000000003}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Counter", "src\repos\studio\src\modules\Elsa.Studio.Counter\Elsa.Studio.Counter.csproj", "{A1B2C3D4-0001-0002-0003-000000000005}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Counter", "submodules\elsa-studio\src\modules\Elsa.Studio.Counter\Elsa.Studio.Counter.csproj", "{A1B2C3D4-0001-0002-0003-000000000005}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Dashboard", "src\repos\studio\src\modules\Elsa.Studio.Dashboard\Elsa.Studio.Dashboard.csproj", "{A1B2C3D4-0001-0002-0003-000000000006}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Dashboard", "submodules\elsa-studio\src\modules\Elsa.Studio.Dashboard\Elsa.Studio.Dashboard.csproj", "{A1B2C3D4-0001-0002-0003-000000000006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Environments", "src\repos\studio\src\modules\Elsa.Studio.Environments\Elsa.Studio.Environments.csproj", "{A1B2C3D4-0001-0002-0003-000000000007}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Environments", "submodules\elsa-studio\src\modules\Elsa.Studio.Environments\Elsa.Studio.Environments.csproj", "{A1B2C3D4-0001-0002-0003-000000000007}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Login", "src\repos\studio\src\modules\Elsa.Studio.Login\Elsa.Studio.Login.csproj", "{A1B2C3D4-0001-0002-0003-000000000008}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Login", "submodules\elsa-studio\src\modules\Elsa.Studio.Login\Elsa.Studio.Login.csproj", "{A1B2C3D4-0001-0002-0003-000000000008}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Login.BlazorServer", "src\repos\studio\src\modules\Elsa.Studio.Login.BlazorServer\Elsa.Studio.Login.BlazorServer.csproj", "{A1B2C3D4-0001-0002-0003-000000000009}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Login.BlazorServer", "submodules\elsa-studio\src\modules\Elsa.Studio.Login.BlazorServer\Elsa.Studio.Login.BlazorServer.csproj", "{A1B2C3D4-0001-0002-0003-000000000009}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Security", "src\repos\studio\src\modules\Elsa.Studio.Security\Elsa.Studio.Security.csproj", "{A1B2C3D4-0001-0002-0003-000000000011}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Security", "submodules\elsa-studio\src\modules\Elsa.Studio.Security\Elsa.Studio.Security.csproj", "{A1B2C3D4-0001-0002-0003-000000000011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.UIHints", "src\repos\studio\src\modules\Elsa.Studio.UIHints\Elsa.Studio.UIHints.csproj", "{A1B2C3D4-0001-0002-0003-000000000012}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.UIHints", "submodules\elsa-studio\src\modules\Elsa.Studio.UIHints\Elsa.Studio.UIHints.csproj", "{A1B2C3D4-0001-0002-0003-000000000012}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workflows", "src\repos\studio\src\modules\Elsa.Studio.Workflows\Elsa.Studio.Workflows.csproj", "{A1B2C3D4-0001-0002-0003-000000000013}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workflows", "submodules\elsa-studio\src\modules\Elsa.Studio.Workflows\Elsa.Studio.Workflows.csproj", "{A1B2C3D4-0001-0002-0003-000000000013}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workflows.Core", "src\repos\studio\src\modules\Elsa.Studio.Workflows.Core\Elsa.Studio.Workflows.Core.csproj", "{A1B2C3D4-0001-0002-0003-000000000014}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workflows.Core", "submodules\elsa-studio\src\modules\Elsa.Studio.Workflows.Core\Elsa.Studio.Workflows.Core.csproj", "{A1B2C3D4-0001-0002-0003-000000000014}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workflows.Designer", "src\repos\studio\src\modules\Elsa.Studio.Workflows.Designer\Elsa.Studio.Workflows.Designer.csproj", "{A1B2C3D4-0001-0002-0003-000000000015}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workflows.Designer", "submodules\elsa-studio\src\modules\Elsa.Studio.Workflows.Designer\Elsa.Studio.Workflows.Designer.csproj", "{A1B2C3D4-0001-0002-0003-000000000015}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Shared", "src\repos\studio\src\framework\Elsa.Studio.Shared\Elsa.Studio.Shared.csproj", "{C62D01DE-9367-4466-AE2D-70A895E5DDF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Shared", "submodules\elsa-studio\src\framework\Elsa.Studio.Shared\Elsa.Studio.Shared.csproj", "{C62D01DE-9367-4466-AE2D-70A895E5DDF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.ActivityPortProviders", "src\repos\studio\src\modules\Elsa.Studio.ActivityPortProviders\Elsa.Studio.ActivityPortProviders.csproj", "{AB61BBBB-28DD-4DA5-827C-43129E92FC29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.ActivityPortProviders", "submodules\elsa-studio\src\modules\Elsa.Studio.ActivityPortProviders\Elsa.Studio.ActivityPortProviders.csproj", "{AB61BBBB-28DD-4DA5-827C-43129E92FC29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Shell", "src\repos\studio\src\framework\Elsa.Studio.Shell\Elsa.Studio.Shell.csproj", "{67910C5D-CA4D-481C-B973-13679E0E0854}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Shell", "submodules\elsa-studio\src\framework\Elsa.Studio.Shell\Elsa.Studio.Shell.csproj", "{67910C5D-CA4D-481C-B973-13679E0E0854}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Translations", "src\repos\studio\src\framework\Elsa.Studio.Translations\Elsa.Studio.Translations.csproj", "{1C5BCFF7-166E-4EF5-BD3F-D7E177414306}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Translations", "submodules\elsa-studio\src\framework\Elsa.Studio.Translations\Elsa.Studio.Translations.csproj", "{1C5BCFF7-166E-4EF5-BD3F-D7E177414306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Agents", "src\repos\extensions\src\modules\agents\Elsa.Studio.Agents\Elsa.Studio.Agents.csproj", "{A10F2C8C-E108-4871-A415-2B06B8B9EA49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Agents", "submodules\elsa-extensions\src\modules\agents\Elsa.Studio.Agents\Elsa.Studio.Agents.csproj", "{A10F2C8C-E108-4871-A415-2B06B8B9EA49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Models", "src\repos\extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj", "{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Models", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj", "{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workbench", "src\workbench\studio\Elsa.Studio.Workbench\Elsa.Studio.Workbench.csproj", "{3B4FFD68-ED84-4E2B-BDC8-5C77C3703F41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Workbench", "src\studio\Elsa.Studio.Web\Elsa.Studio.Web.csproj", "{3B4FFD68-ED84-4E2B-BDC8-5C77C3703F41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{5E13529B-3FCC-4B5A-9471-F2E6CD2DA135}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.targets = Directory.Build.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{8A2A1FDD-D614-42A9-BBB2-8BFE0DD8DC5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "elsa-core", "elsa-core", "{A4BE448E-4C10-40BE-8B77-28E3117C5CCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Api.Client", "submodules\elsa-core\src\clients\Elsa.Api.Client\Elsa.Api.Client.csproj", "{35B313F8-9BEB-458B-9246-48E6BA562AFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,6 +172,10 @@ Global
 		{3B4FFD68-ED84-4E2B-BDC8-5C77C3703F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B4FFD68-ED84-4E2B-BDC8-5C77C3703F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B4FFD68-ED84-4E2B-BDC8-5C77C3703F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35B313F8-9BEB-458B-9246-48E6BA562AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35B313F8-9BEB-458B-9246-48E6BA562AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35B313F8-9BEB-458B-9246-48E6BA562AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35B313F8-9BEB-458B-9246-48E6BA562AFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D5C1A423-18E5-4888-90D4-77E96A9A0556} = {849E1085-B4D8-42F6-9D4A-99B7B62F66E8}
@@ -186,5 +201,9 @@ Global
 		{A10F2C8C-E108-4871-A415-2B06B8B9EA49} = {C389E158-47E2-46BE-B32C-5A0DD3C31F2D}
 		{1DB09D3C-7C8C-44BA-9BB2-8FE9008A6DD3} = {C389E158-47E2-46BE-B32C-5A0DD3C31F2D}
 		{3B4FFD68-ED84-4E2B-BDC8-5C77C3703F41} = {27A1CA5D-EBFE-4B91-9FC6-21BD13C282B7}
+		{C389E158-47E2-46BE-B32C-5A0DD3C31F2D} = {8A2A1FDD-D614-42A9-BBB2-8BFE0DD8DC5C}
+		{849E1085-B4D8-42F6-9D4A-99B7B62F66E8} = {8A2A1FDD-D614-42A9-BBB2-8BFE0DD8DC5C}
+		{A4BE448E-4C10-40BE-8B77-28E3117C5CCC} = {8A2A1FDD-D614-42A9-BBB2-8BFE0DD8DC5C}
+		{35B313F8-9BEB-458B-9246-48E6BA562AFC} = {A4BE448E-4C10-40BE-8B77-28E3117C5CCC}
 	EndGlobalSection
 EndGlobal

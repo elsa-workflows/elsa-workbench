@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Server.Web", "src\workbench\server\Elsa.Server.Web\Elsa.Server.Web.csproj", "{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Server.Web", "src\server\Elsa.Server.Web\Elsa.Server.Web.csproj", "{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{B84481B6-9E04-4BEF-BDF7-5C2280ACD34D}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,17 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4D1E8F17-05A
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{38E12C7C-D49B-44E3-BC2B-54BDA5B9F7E9}"
 	ProjectSection(SolutionItems) = preProject
-		src\workbench\server\Directory.Build.props = src\workbench\server\Directory.Build.props
-		src\workbench\server\Directory.Packages.props = src\workbench\server\Directory.Packages.props
+		src\server\Directory.Build.props = src\server\Directory.Build.props
+		src\server\Directory.Packages.props = src\server\Directory.Packages.props
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "studio", "studio", "{7B5F677E-7269-4B65-B5E2-06864F5BC639}"
 	ProjectSection(SolutionItems) = preProject
-		src\workbench\studio\Directory.Build.props = src\workbench\studio\Directory.Build.props
-		src\workbench\studio\Directory.Packages.props = src\workbench\studio\Directory.Packages.props
+		src\studio\Directory.Build.props = src\studio\Directory.Build.props
+		src\studio\Directory.Packages.props = src\studio\Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Web", "src\workbench\studio\Elsa.Studio.Web\Elsa.Studio.Web.csproj", "{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Web", "src\studio\Elsa.Studio.Web\Elsa.Studio.Web.csproj", "{E01C6199-2A1D-44E2-97AC-E690B0B4EFA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
