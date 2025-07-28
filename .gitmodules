@@ -1,3 +1,0 @@
-[submodule "src/repos/studio"]
-	path = src/repos/studio
-	url = https://github.com/elsa-workflows/elsa-studio.git
