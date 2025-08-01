@@ -428,17 +428,17 @@ services
                 options.AppendScript("string Greet(string name) => $\"Hello {name}!\";");
                 options.AppendScript("string SayHelloWorld() => Greet(\"World\");");
             })
-            //.UseJavaScript(options =>
-            //{
-            //    options.AllowClrAccess = true;
-            //    options.DisableWrappers = disableVariableWrappers;
-            //    options.DisableVariableCopying = disableVariableCopying;
-            //    options.ConfigureEngine(engine =>
-            //    {
-            //        engine.Execute("function greet(name) { return `Hello ${name}!`; }");
-            //        engine.Execute("function sayHelloWorld() { return greet('World'); }");
-            //    });
-            //})
+            .UseJavaScript(options =>
+            {
+                options.AllowClrAccess = true;
+                options.DisableWrappers = disableVariableWrappers;
+                options.DisableVariableCopying = disableVariableCopying;
+                options.ConfigureEngine(engine =>
+                {
+                    engine.Execute("function greet(name) { return `Hello ${name}!`; }");
+                    engine.Execute("function sayHelloWorld() { return greet('World'); }");
+                });
+            })
             .UsePython(python =>
             {
                 python.PythonOptions += options =>
