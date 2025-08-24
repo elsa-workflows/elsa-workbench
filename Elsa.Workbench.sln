@@ -317,6 +317,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Telnyx", "submodules\e
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Slack", "submodules\elsa-extensions\src\modules\communication\Elsa.Slack\Elsa.Slack.csproj", "{ED874A3D-7337-434A-B94D-542BAEC7A6B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "testing", "testing", "{998191F4-A585-409E-BA6E-B80305660E66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Testing.Core", "submodules\elsa-extensions\src\modules\testing\Elsa.Testing.Core\Elsa.Testing.Core.csproj", "{CCA65663-6D1B-4779-9573-034C4B690FF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Testing.Framework", "submodules\elsa-core\src\common\Elsa.Testing.Framework\Elsa.Testing.Framework.csproj", "{3D33A69E-BECC-4ABC-A890-EB16F88075C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Testing.Persistence.EFCore", "submodules\elsa-extensions\src\modules\testing\Elsa.Testing.Persistence.EFCore\Elsa.Testing.Persistence.EFCore.csproj", "{3C3DBCEC-D4F8-40A4-AF13-91E4ACB79DFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Secrets.Persistence.EFCore.PostgreSql", "submodules\elsa-extensions\src\modules\secrets\Elsa.Secrets.Persistence.EFCore.PostgreSql\Elsa.Secrets.Persistence.EFCore.PostgreSql.csproj", "{CCB38929-92E0-433E-AB4D-56A8B2056F14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Secrets.Persistence.EFCore.Sqlite", "submodules\elsa-extensions\src\modules\secrets\Elsa.Secrets.Persistence.EFCore.Sqlite\Elsa.Secrets.Persistence.EFCore.Sqlite.csproj", "{A7CCB3EF-FF4E-4965-96F2-923FDE5DB238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Secrets.Persistence.EFCore.SqlServer", "submodules\elsa-extensions\src\modules\secrets\Elsa.Secrets.Persistence.EFCore.SqlServer\Elsa.Secrets.Persistence.EFCore.SqlServer.csproj", "{C4227C01-2E4C-4329-B201-6CD7326B3061}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -467,6 +481,13 @@ Global
 		{4A897BD4-B809-4458-A72E-C47493652CA1} = {8CD10FDF-FD25-45F3-8407-9649116A77AB}
 		{F532CDEC-288F-4512-8798-89425F8D5DFD} = {8CD10FDF-FD25-45F3-8407-9649116A77AB}
 		{ED874A3D-7337-434A-B94D-542BAEC7A6B6} = {90F08CCC-E478-4DBA-8D17-4434339DF614}
+		{998191F4-A585-409E-BA6E-B80305660E66} = {BB061A66-45B6-4390-8CA4-ED98EFFBA5D3}
+		{CCA65663-6D1B-4779-9573-034C4B690FF7} = {998191F4-A585-409E-BA6E-B80305660E66}
+		{3D33A69E-BECC-4ABC-A890-EB16F88075C8} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
+		{3C3DBCEC-D4F8-40A4-AF13-91E4ACB79DFD} = {998191F4-A585-409E-BA6E-B80305660E66}
+		{CCB38929-92E0-433E-AB4D-56A8B2056F14} = {04968C34-609C-432E-A3B2-59A6414E6BE4}
+		{A7CCB3EF-FF4E-4965-96F2-923FDE5DB238} = {04968C34-609C-432E-A3B2-59A6414E6BE4}
+		{C4227C01-2E4C-4329-B201-6CD7326B3061} = {04968C34-609C-432E-A3B2-59A6414E6BE4}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -929,5 +950,29 @@ Global
 		{ED874A3D-7337-434A-B94D-542BAEC7A6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED874A3D-7337-434A-B94D-542BAEC7A6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED874A3D-7337-434A-B94D-542BAEC7A6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCA65663-6D1B-4779-9573-034C4B690FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA65663-6D1B-4779-9573-034C4B690FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA65663-6D1B-4779-9573-034C4B690FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA65663-6D1B-4779-9573-034C4B690FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D33A69E-BECC-4ABC-A890-EB16F88075C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D33A69E-BECC-4ABC-A890-EB16F88075C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D33A69E-BECC-4ABC-A890-EB16F88075C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D33A69E-BECC-4ABC-A890-EB16F88075C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C3DBCEC-D4F8-40A4-AF13-91E4ACB79DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C3DBCEC-D4F8-40A4-AF13-91E4ACB79DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C3DBCEC-D4F8-40A4-AF13-91E4ACB79DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C3DBCEC-D4F8-40A4-AF13-91E4ACB79DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCB38929-92E0-433E-AB4D-56A8B2056F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB38929-92E0-433E-AB4D-56A8B2056F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB38929-92E0-433E-AB4D-56A8B2056F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB38929-92E0-433E-AB4D-56A8B2056F14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CCB3EF-FF4E-4965-96F2-923FDE5DB238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CCB3EF-FF4E-4965-96F2-923FDE5DB238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CCB3EF-FF4E-4965-96F2-923FDE5DB238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CCB3EF-FF4E-4965-96F2-923FDE5DB238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4227C01-2E4C-4329-B201-6CD7326B3061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4227C01-2E4C-4329-B201-6CD7326B3061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4227C01-2E4C-4329-B201-6CD7326B3061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4227C01-2E4C-4329-B201-6CD7326B3061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
