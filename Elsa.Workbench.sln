@@ -315,6 +315,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Workflows.Runtime.Prot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Telnyx", "submodules\elsa-extensions\src\modules\telecom\Elsa.Telnyx\Elsa.Telnyx.csproj", "{3F9D8765-7035-407F-862B-B9E114CE7029}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Slack", "submodules\elsa-extensions\src\modules\communication\Elsa.Slack\Elsa.Slack.csproj", "{ED874A3D-7337-434A-B94D-542BAEC7A6B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -464,6 +466,7 @@ Global
 		{7FC58E59-0C4B-4DEB-9CC9-3AF63E6FE5D1} = {04968C34-609C-432E-A3B2-59A6414E6BE4}
 		{4A897BD4-B809-4458-A72E-C47493652CA1} = {8CD10FDF-FD25-45F3-8407-9649116A77AB}
 		{F532CDEC-288F-4512-8798-89425F8D5DFD} = {8CD10FDF-FD25-45F3-8407-9649116A77AB}
+		{ED874A3D-7337-434A-B94D-542BAEC7A6B6} = {90F08CCC-E478-4DBA-8D17-4434339DF614}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -922,5 +925,9 @@ Global
 		{3F9D8765-7035-407F-862B-B9E114CE7029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F9D8765-7035-407F-862B-B9E114CE7029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F9D8765-7035-407F-862B-B9E114CE7029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED874A3D-7337-434A-B94D-542BAEC7A6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED874A3D-7337-434A-B94D-542BAEC7A6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED874A3D-7337-434A-B94D-542BAEC7A6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED874A3D-7337-434A-B94D-542BAEC7A6B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
