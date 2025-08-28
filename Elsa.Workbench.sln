@@ -331,6 +331,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Secrets.Persistence.EF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Secrets.Persistence.EFCore.SqlServer", "submodules\elsa-extensions\src\modules\secrets\Elsa.Secrets.Persistence.EFCore.SqlServer\Elsa.Secrets.Persistence.EFCore.SqlServer.csproj", "{C4227C01-2E4C-4329-B201-6CD7326B3061}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Testing.Api", "submodules\elsa-extensions\src\modules\testing\Elsa.Testing.Api\Elsa.Testing.Api.csproj", "{A903906A-E29C-48DD-9191-036C46D619B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Testing.Persistence.EFCore.Sqlite", "submodules\elsa-extensions\src\modules\testing\Elsa.Testing.Persistence.EFCore.Sqlite\Elsa.Testing.Persistence.EFCore.Sqlite.csproj", "{A3591FD9-3C86-4F5B-87BF-2541C353DDD5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -488,6 +492,8 @@ Global
 		{CCB38929-92E0-433E-AB4D-56A8B2056F14} = {04968C34-609C-432E-A3B2-59A6414E6BE4}
 		{A7CCB3EF-FF4E-4965-96F2-923FDE5DB238} = {04968C34-609C-432E-A3B2-59A6414E6BE4}
 		{C4227C01-2E4C-4329-B201-6CD7326B3061} = {04968C34-609C-432E-A3B2-59A6414E6BE4}
+		{A903906A-E29C-48DD-9191-036C46D619B8} = {998191F4-A585-409E-BA6E-B80305660E66}
+		{A3591FD9-3C86-4F5B-87BF-2541C353DDD5} = {998191F4-A585-409E-BA6E-B80305660E66}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{13929FCA-1870-4BA1-8C47-8DC384FC9C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -974,5 +980,13 @@ Global
 		{C4227C01-2E4C-4329-B201-6CD7326B3061}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4227C01-2E4C-4329-B201-6CD7326B3061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4227C01-2E4C-4329-B201-6CD7326B3061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A903906A-E29C-48DD-9191-036C46D619B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A903906A-E29C-48DD-9191-036C46D619B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A903906A-E29C-48DD-9191-036C46D619B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A903906A-E29C-48DD-9191-036C46D619B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3591FD9-3C86-4F5B-87BF-2541C353DDD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3591FD9-3C86-4F5B-87BF-2541C353DDD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3591FD9-3C86-4F5B-87BF-2541C353DDD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3591FD9-3C86-4F5B-87BF-2541C353DDD5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
