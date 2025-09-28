@@ -5,6 +5,8 @@
     </PropertyGroup>
     <ItemGroup Label="Elsa">
         <PackageVersion Include="Elsa" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Alterations" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Alterations.Core" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Api.Client" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Api.Common" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Caching" Version="$(ElsaVersion)"/>
@@ -19,7 +21,15 @@
         <PackageVersion Include="Elsa.Http" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Identity" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.KeyValues" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Labels" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Mediator" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.Common" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.MySql" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.Oracle" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.PostgreSql" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.Sqlite" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Persistence.EFCore.SqlServer" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Resilience" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Resilience.Core" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.SasTokens" Version="$(ElsaVersion)"/>
@@ -35,8 +45,6 @@
     </ItemGroup>
     <ItemGroup Label="Elsa Extensions">
         <PackageVersion Include="Elsa.Actors.ProtoActor" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Alterations" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Alterations.Core" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Alterations.MassTransit" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Caching.Distributed" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Caching.Distributed.MassTransit" Version="$(ElsaExtensionsVersion)"/>
@@ -44,17 +52,9 @@
         <PackageVersion Include="Elsa.DropIns" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Email" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Http.Webhooks" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Labels" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.OpenTelemetry" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Persistence.Dapper" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Persistence.Dapper.Migrations" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Persistence.EFCore" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Persistence.EFCore.Common" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Persistence.EFCore.MySql" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Persistence.EFCore.Oracle" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Persistence.EFCore.PostgreSql" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Persistence.EFCore.Sqlite" Version="$(ElsaExtensionsVersion)"/>
-        <PackageVersion Include="Elsa.Persistence.EFCore.SqlServer" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Persistence.MongoDb" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.Retention" Version="$(ElsaExtensionsVersion)"/>
         <PackageVersion Include="Elsa.ServiceBus.AzureServiceBus" Version="$(ElsaExtensionsVersion)"/>
