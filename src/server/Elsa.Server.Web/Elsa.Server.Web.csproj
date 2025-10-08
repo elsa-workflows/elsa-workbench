@@ -37,6 +37,7 @@
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Http\Elsa.Http.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Identity\Elsa.Identity.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.KeyValues\Elsa.KeyValues.csproj"/>
+		<ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Labels\Elsa.Labels.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Persistence.EFCore.Common\Elsa.Persistence.EFCore.Common.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Persistence.EFCore.MySql\Elsa.Persistence.EFCore.MySql.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Persistence.EFCore.Oracle\Elsa.Persistence.EFCore.Oracle.csproj"/>
@@ -68,7 +69,6 @@
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\dropins\Elsa.DropIns\Elsa.DropIns.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\email\Elsa.Email\Elsa.Email.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks\Elsa.Http.Webhooks.csproj"/>
-        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\labels\Elsa.Labels\Elsa.Labels.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\persistence\Elsa.Persistence.MongoDb\Elsa.Persistence.MongoDb.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\persistence\Elsa.Persistence.Dapper.Migrations\Elsa.Persistence.Dapper.Migrations.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\persistence\Elsa.Persistence.Dapper\Elsa.Persistence.Dapper.csproj"/>
@@ -95,6 +95,8 @@
     <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
         <!-- Core Elsa and extensions -->
         <PackageReference Include="Elsa" />
+		<PackageReference Include="Elsa.Alterations.Core" />
+		<PackageReference Include="Elsa.Alterations" />
         <PackageReference Include="Elsa.Api.Client" />
         <PackageReference Include="Elsa.Api.Common" />
         <PackageReference Include="Elsa.Mediator" />
@@ -110,6 +112,14 @@
         <PackageReference Include="Elsa.Http" />
         <PackageReference Include="Elsa.Identity" />
         <PackageReference Include="Elsa.KeyValues" />
+		<PackageReference Include="Elsa.Labels" />
+		<PackageReference Include="Elsa.Persistence.EFCore.Common" />
+		<PackageReference Include="Elsa.Persistence.EFCore.MySql" />
+		<PackageReference Include="Elsa.Persistence.EFCore.Oracle" />
+		<PackageReference Include="Elsa.Persistence.EFCore.PostgreSql" />
+		<PackageReference Include="Elsa.Persistence.EFCore.Sqlite" />
+		<PackageReference Include="Elsa.Persistence.EFCore.SqlServer" />
+		<PackageReference Include="Elsa.Persistence.EFCore" />
         <PackageReference Include="Elsa.Resilience.Core" />
         <PackageReference Include="Elsa.Resilience" />
         <PackageReference Include="Elsa.SasTokens" />
@@ -130,9 +140,7 @@
 
         <!-- Extensions -->
         <PackageReference Include="Elsa.Actors.ProtoActor" />
-        <PackageReference Include="Elsa.Alterations.Core" />
-        <PackageReference Include="Elsa.Alterations.MassTransit" />
-        <PackageReference Include="Elsa.Alterations" />
+		<PackageReference Include="Elsa.Alterations.MassTransit" />
         <PackageReference Include="Elsa.Caching.Distributed.MassTransit" />
         <PackageReference Include="Elsa.Caching.Distributed.ProtoActor" />
         <PackageReference Include="Elsa.Caching.Distributed" />
@@ -140,16 +148,8 @@
         <PackageReference Include="Elsa.DropIns" />
         <PackageReference Include="Elsa.Email" />
         <PackageReference Include="Elsa.Http.Webhooks" />
-        <PackageReference Include="Elsa.Labels" />
         <PackageReference Include="Elsa.Persistence.Dapper.Migrations" />
         <PackageReference Include="Elsa.Persistence.Dapper" />
-        <PackageReference Include="Elsa.Persistence.EFCore.Common" />
-        <PackageReference Include="Elsa.Persistence.EFCore.MySql" />
-        <PackageReference Include="Elsa.Persistence.EFCore.Oracle" />
-        <PackageReference Include="Elsa.Persistence.EFCore.PostgreSql" />
-        <PackageReference Include="Elsa.Persistence.EFCore.Sqlite" />
-        <PackageReference Include="Elsa.Persistence.EFCore.SqlServer" />
-        <PackageReference Include="Elsa.Persistence.EFCore" />
         <PackageReference Include="Elsa.Persistence.MongoDb" />
         <PackageReference Include="Elsa.Retention" />
         <PackageReference Include="Elsa.Scheduling.Hangfire" />
