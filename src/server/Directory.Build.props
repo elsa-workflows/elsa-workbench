@@ -10,6 +10,7 @@
         <ElsaStudioVersion>3.6.0-preview.1237</ElsaStudioVersion>
         <ElsaExtensionsVersion>3.6.0-preview.156</ElsaExtensionsVersion>
         <MicrosoftVersion>9.0.9</MicrosoftVersion>
+        <ResilienceVersion>9.9.0</ResilienceVersion>
     </PropertyGroup>
 
     <ItemGroup>

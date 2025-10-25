@@ -31,6 +31,7 @@ using Elsa.Retention.Models;
 using Elsa.Server.Web;
 using Elsa.Server.Web.Extensions;
 using Elsa.Server.Web.Filters;
+using Elsa.Server.Web.Models;
 using Elsa.ServiceBus.MassTransit.Extensions;
 using Elsa.Sql.Extensions;
 using Elsa.Sql.MySql;
@@ -44,6 +45,7 @@ using Elsa.Workflows.Api;
 using Elsa.Workflows.CommitStates.Strategies;
 using Elsa.Workflows.IncidentStrategies;
 using Elsa.Workflows.LogPersistence;
+using Elsa.Workflows.Management;
 using Elsa.Workflows.Management.Stores;
 using Elsa.Workflows.Options;
 using Elsa.Workflows.Runtime.Distributed.Extensions;
@@ -319,6 +321,7 @@ services
 
                 management.SetDefaultLogPersistenceMode(LogPersistenceMode.Inherit);
                 management.UseReadOnlyMode(useReadOnlyMode);
+                management.AddVariableTypeAndAlias<Product>("Product", "Demo");
             })
             .UseWorkflowRuntime(runtime =>
             {
@@ -685,6 +688,7 @@ services
             });
         }
 
+        elsa.UseCsv();
         elsa.UseWebhooks(webhooks => webhooks.ConfigureSinks += options => builder.Configuration.GetSection("Webhooks").Bind(options));
         elsa.InstallDropIns(options => options.DropInRootDirectory = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", "DropIns"));
         elsa.AddSwagger();

@@ -324,6 +324,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.UIHints", "subm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.ActivityPortProviders", "submodules\elsa-studio\src\modules\Elsa.Studio.ActivityPortProviders\Elsa.Studio.ActivityPortProviders.csproj", "{A3663FDD-5607-504C-8F9C-9DFED2DBF9C8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{DBE82A94-F860-4E47-8ADF-86FB22B8071B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Data.Csv", "submodules\elsa-extensions\src\modules\data\Elsa.Data.Csv\Elsa.Data.Csv.csproj", "{ADF55CE4-6488-460B-99D7-DA693BDA437A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -802,6 +806,10 @@ Global
 		{A3663FDD-5607-504C-8F9C-9DFED2DBF9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3663FDD-5607-504C-8F9C-9DFED2DBF9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3663FDD-5607-504C-8F9C-9DFED2DBF9C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF55CE4-6488-460B-99D7-DA693BDA437A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF55CE4-6488-460B-99D7-DA693BDA437A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF55CE4-6488-460B-99D7-DA693BDA437A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF55CE4-6488-460B-99D7-DA693BDA437A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -953,6 +961,8 @@ Global
 		{970265BD-0E65-A6A0-A0BE-1B7C3BDA11C5} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
 		{629C4285-2A88-3DC4-30F3-575AA4D8363B} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
 		{A3663FDD-5607-504C-8F9C-9DFED2DBF9C8} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{DBE82A94-F860-4E47-8ADF-86FB22B8071B} = {BB061A66-45B6-4390-8CA4-ED98EFFBA5D3}
+		{ADF55CE4-6488-460B-99D7-DA693BDA437A} = {DBE82A94-F860-4E47-8ADF-86FB22B8071B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {121DEFAC-DAA4-4F25-BEA9-92D24660F80D}

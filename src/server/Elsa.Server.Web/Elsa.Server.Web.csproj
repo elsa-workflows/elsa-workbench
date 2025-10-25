@@ -165,5 +165,9 @@
         <PackageReference Include="Elsa.Workflows.Runtime.ProtoActor" />
         <PackageReference Include="Elsa.WorkflowContexts" />
     </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\data\Elsa.Data.Csv\Elsa.Data.Csv.csproj" />
+    </ItemGroup>
 
 </Project>
