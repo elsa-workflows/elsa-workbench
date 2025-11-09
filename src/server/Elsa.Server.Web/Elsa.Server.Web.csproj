@@ -167,6 +167,13 @@
     </ItemGroup>
     
     <ItemGroup>
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Activities\Elsa.Agents.Activities.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Api\Elsa.Agents.Api.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Core\Elsa.Agents.Core.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.Sqlite\Elsa.Agents.Persistence.EFCore.Sqlite.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore\Elsa.Agents.Persistence.EFCore.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence\Elsa.Agents.Persistence.csproj" />
       <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\data\Elsa.Data.Csv\Elsa.Data.Csv.csproj" />
     </ItemGroup>
 

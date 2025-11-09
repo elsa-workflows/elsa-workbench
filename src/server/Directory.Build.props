@@ -6,9 +6,9 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <ElsaVersion>3.6.0-preview.3447</ElsaVersion>
-        <ElsaStudioVersion>3.6.0-preview.1237</ElsaStudioVersion>
-        <ElsaExtensionsVersion>3.6.0-preview.156</ElsaExtensionsVersion>
+        <ElsaVersion>3.6.0-preview.3780</ElsaVersion>
+        <ElsaStudioVersion>3.6.0-preview.1261</ElsaStudioVersion>
+        <ElsaExtensionsVersion>3.6.0-preview.164</ElsaExtensionsVersion>
         <MicrosoftVersion>9.0.9</MicrosoftVersion>
         <ResilienceVersion>9.9.0</ResilienceVersion>
     </PropertyGroup>

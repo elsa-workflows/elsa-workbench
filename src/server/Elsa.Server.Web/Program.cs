@@ -1,6 +1,8 @@
 using System;
 using System.IO;
 using System.Text.Encodings.Web;
+using Elsa.Agents;
+using Elsa.Agents.Persistence.EFCore;
 using Elsa.Alterations.Extensions;
 using Elsa.Alterations.MassTransit.Extensions;
 using Elsa.Caching.Options;
@@ -506,7 +508,7 @@ services
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.CockroachDb)
                             ef.UsePostgreSql(cockroachDbConnectionString);
                         else if (sqlDatabaseProvider == SqlDatabaseProvider.Oracle)
-                            ef.UseOracle(oracleConnectionString, new Elsa.Persistence.EFCore.ElsaDbContextOptions()
+                            ef.UseOracle(oracleConnectionString, new()
                             {
                                 SchemaName = "ELSA"
                             });
@@ -523,7 +525,10 @@ services
                 }
             })
             .UseOpenTelemetry(otel => otel.UseNewRootActivityForRemoteParent = true)
-            .UseWorkflowContexts();
+            .UseWorkflowContexts()
+            .UseAgentActivities()
+            .UseAgentsApi()
+            .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
 
         if (useQuartz)
         {
