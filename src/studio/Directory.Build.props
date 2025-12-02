@@ -1,15 +1,14 @@
 <Project>
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>net10.0</TargetFramework>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
     
     <PropertyGroup>
-        <ElsaVersion>3.6.0-preview.3780</ElsaVersion>
-        <ElsaStudioVersion>3.6.0-preview.1261</ElsaStudioVersion>
-        <ElsaExtensionsVersion>3.6.0-preview.164</ElsaExtensionsVersion>
-        <MicrosoftVersion>9.0.10</MicrosoftVersion>
+        <ElsaVersion>3.6.0-preview.3976</ElsaVersion>
+        <ElsaStudioVersion>3.6.0-preview.1286</ElsaStudioVersion>
+        <ElsaExtensionsVersion>3.6.0-preview.177</ElsaExtensionsVersion>
     </PropertyGroup>
 
     <ItemGroup>
