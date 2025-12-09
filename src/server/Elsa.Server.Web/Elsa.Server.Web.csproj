@@ -175,6 +175,10 @@
       <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore\Elsa.Agents.Persistence.EFCore.csproj" />
       <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence\Elsa.Agents.Persistence.csproj" />
       <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\data\Elsa.Data.Csv\Elsa.Data.Csv.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Console\Elsa.Logging.Console.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Core\Elsa.Logging.Core.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Serilog\Elsa.Logging.Serilog.csproj" />
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging\Elsa.Logging.csproj" />
     </ItemGroup>
 
 </Project>
