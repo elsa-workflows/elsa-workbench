@@ -13,6 +13,7 @@ using Elsa.DropIns.Extensions;
 using Elsa.Expressions.Helpers;
 using Elsa.Extensions;
 using Elsa.Identity.Multitenancy;
+using Elsa.Logging.Extensions;
 using Elsa.OpenTelemetry.Middleware;
 using Elsa.Persistence.Dapper.Extensions;
 using Elsa.Persistence.Dapper.Services;
@@ -526,6 +527,7 @@ services
             })
             .UseOpenTelemetry(otel => otel.UseNewRootActivityForRemoteParent = true)
             .UseWorkflowContexts()
+            .UseLoggingFramework(logging => logging.UseConsole())
             .UseAgentActivities()
             .UseAgentsApi()
             .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
