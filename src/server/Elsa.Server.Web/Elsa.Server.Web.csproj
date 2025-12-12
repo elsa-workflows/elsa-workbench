@@ -6,6 +6,17 @@
         <PackageReference Include="Hangfire.PostgreSql"/>
         <PackageReference Include="Hangfire.SqlServer"/>
         <PackageReference Include="Hangfire.Storage.SQLite"/>
+        <PackageReference Include="Microsoft.SemanticKernel"/>
+        <PackageReference Include="Microsoft.SemanticKernel.Agents.Abstractions"/>
+        <PackageReference Include="Microsoft.SemanticKernel.Agents.Core"/>
+        <PackageReference Include="Microsoft.SemanticKernel.PromptTemplates.Handlebars"/>
+        <PackageReference Include="Microsoft.SemanticKernel.Plugins.Memory"/>
+        <PackageReference Include="Microsoft.SemanticKernel.Connectors.InMemory"/>
+        <PackageReference Include="Microsoft.Agents.AI.Workflows"/>
+        <PackageReference Include="Microsoft.Extensions.AI"/>
+        <PackageReference Include="Microsoft.Agents.AI"/>
+        <PackageReference Include="Microsoft.Extensions.AI.OpenAI"/>
+        <PackageReference Include="Azure.AI.OpenAI"/>
         <PackageReference Include="Proto.Cluster.Kubernetes"/>
         <PackageReference Include="Proto.Persistence.Sqlite"/>
         <PackageReference Include="Proto.Persistence.SqlServer"/>
@@ -37,7 +48,7 @@
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Http\Elsa.Http.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Identity\Elsa.Identity.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.KeyValues\Elsa.KeyValues.csproj"/>
-		<ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Labels\Elsa.Labels.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Labels\Elsa.Labels.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Persistence.EFCore.Common\Elsa.Persistence.EFCore.Common.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Persistence.EFCore.MySql\Elsa.Persistence.EFCore.MySql.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Persistence.EFCore.Oracle\Elsa.Persistence.EFCore.Oracle.csproj"/>
@@ -91,94 +102,98 @@
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\sql\Elsa.Sql\Elsa.Sql.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\workflows\Elsa.WorkflowContexts\Elsa.WorkflowContexts.csproj"/>
     </ItemGroup>
-    
+
     <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
         <!-- Core Elsa and extensions -->
-        <PackageReference Include="Elsa" />
-		<PackageReference Include="Elsa.Alterations.Core" />
-		<PackageReference Include="Elsa.Alterations" />
-        <PackageReference Include="Elsa.Api.Client" />
-        <PackageReference Include="Elsa.Api.Common" />
-        <PackageReference Include="Elsa.Mediator" />
-        <PackageReference Include="Elsa.Caching" />
-        <PackageReference Include="Elsa.Common" />
-        <PackageReference Include="Elsa.Expressions.CSharp" />
-        <PackageReference Include="Elsa.Expressions.JavaScript.Libraries" />
-        <PackageReference Include="Elsa.Expressions.JavaScript" />
-        <PackageReference Include="Elsa.Expressions.Liquid" />
-        <PackageReference Include="Elsa.Expressions.Python" />
-        <PackageReference Include="Elsa.Expressions" />
-        <PackageReference Include="Elsa.Hosting.Management" />
-        <PackageReference Include="Elsa.Http" />
-        <PackageReference Include="Elsa.Identity" />
-        <PackageReference Include="Elsa.KeyValues" />
-		<PackageReference Include="Elsa.Labels" />
-		<PackageReference Include="Elsa.Persistence.EFCore.Common" />
-		<PackageReference Include="Elsa.Persistence.EFCore.MySql" />
-		<PackageReference Include="Elsa.Persistence.EFCore.Oracle" />
-		<PackageReference Include="Elsa.Persistence.EFCore.PostgreSql" />
-		<PackageReference Include="Elsa.Persistence.EFCore.Sqlite" />
-		<PackageReference Include="Elsa.Persistence.EFCore.SqlServer" />
-		<PackageReference Include="Elsa.Persistence.EFCore" />
-        <PackageReference Include="Elsa.Resilience.Core" />
-        <PackageReference Include="Elsa.Resilience" />
-        <PackageReference Include="Elsa.SasTokens" />
-        <PackageReference Include="Elsa.Scheduling" />
-        <PackageReference Include="Elsa.Sql" />
-        <PackageReference Include="Elsa.Sql.MySql" />
-        <PackageReference Include="Elsa.Sql.PostgreSql" />
-        <PackageReference Include="Elsa.Sql.Sqlite" />
-        <PackageReference Include="Elsa.Sql.SqlServer" />
-        <PackageReference Include="Elsa.Tenants.AspNetCore" />
-        <PackageReference Include="Elsa.Tenants" />
-        <PackageReference Include="Elsa.WorkflowProviders.BlobStorage" />
-        <PackageReference Include="Elsa.Workflows.Api" />
-        <PackageReference Include="Elsa.Workflows.Core" />
-        <PackageReference Include="Elsa.Workflows.Management" />
-        <PackageReference Include="Elsa.Workflows.Runtime.Distributed" />
-        <PackageReference Include="Elsa.Workflows.Runtime" />
+        <PackageReference Include="Elsa"/>
+        <PackageReference Include="Elsa.Alterations.Core"/>
+        <PackageReference Include="Elsa.Alterations"/>
+        <PackageReference Include="Elsa.Api.Client"/>
+        <PackageReference Include="Elsa.Api.Common"/>
+        <PackageReference Include="Elsa.Mediator"/>
+        <PackageReference Include="Elsa.Caching"/>
+        <PackageReference Include="Elsa.Common"/>
+        <PackageReference Include="Elsa.Expressions.CSharp"/>
+        <PackageReference Include="Elsa.Expressions.JavaScript.Libraries"/>
+        <PackageReference Include="Elsa.Expressions.JavaScript"/>
+        <PackageReference Include="Elsa.Expressions.Liquid"/>
+        <PackageReference Include="Elsa.Expressions.Python"/>
+        <PackageReference Include="Elsa.Expressions"/>
+        <PackageReference Include="Elsa.Hosting.Management"/>
+        <PackageReference Include="Elsa.Http"/>
+        <PackageReference Include="Elsa.Identity"/>
+        <PackageReference Include="Elsa.KeyValues"/>
+        <PackageReference Include="Elsa.Labels"/>
+        <PackageReference Include="Elsa.Persistence.EFCore.Common"/>
+        <PackageReference Include="Elsa.Persistence.EFCore.MySql"/>
+        <PackageReference Include="Elsa.Persistence.EFCore.Oracle"/>
+        <PackageReference Include="Elsa.Persistence.EFCore.PostgreSql"/>
+        <PackageReference Include="Elsa.Persistence.EFCore.Sqlite"/>
+        <PackageReference Include="Elsa.Persistence.EFCore.SqlServer"/>
+        <PackageReference Include="Elsa.Persistence.EFCore"/>
+        <PackageReference Include="Elsa.Resilience.Core"/>
+        <PackageReference Include="Elsa.Resilience"/>
+        <PackageReference Include="Elsa.SasTokens"/>
+        <PackageReference Include="Elsa.Scheduling"/>
+        <PackageReference Include="Elsa.Sql"/>
+        <PackageReference Include="Elsa.Sql.MySql"/>
+        <PackageReference Include="Elsa.Sql.PostgreSql"/>
+        <PackageReference Include="Elsa.Sql.Sqlite"/>
+        <PackageReference Include="Elsa.Sql.SqlServer"/>
+        <PackageReference Include="Elsa.Tenants.AspNetCore"/>
+        <PackageReference Include="Elsa.Tenants"/>
+        <PackageReference Include="Elsa.WorkflowProviders.BlobStorage"/>
+        <PackageReference Include="Elsa.Workflows.Api"/>
+        <PackageReference Include="Elsa.Workflows.Core"/>
+        <PackageReference Include="Elsa.Workflows.Management"/>
+        <PackageReference Include="Elsa.Workflows.Runtime.Distributed"/>
+        <PackageReference Include="Elsa.Workflows.Runtime"/>
 
         <!-- Extensions -->
-        <PackageReference Include="Elsa.Actors.ProtoActor" />
-		<PackageReference Include="Elsa.Alterations.MassTransit" />
-        <PackageReference Include="Elsa.Caching.Distributed.MassTransit" />
-        <PackageReference Include="Elsa.Caching.Distributed.ProtoActor" />
-        <PackageReference Include="Elsa.Caching.Distributed" />
-        <PackageReference Include="Elsa.OpenTelemetry" />
-        <PackageReference Include="Elsa.DropIns" />
-        <PackageReference Include="Elsa.Email" />
-        <PackageReference Include="Elsa.Http.Webhooks" />
-        <PackageReference Include="Elsa.Persistence.Dapper.Migrations" />
-        <PackageReference Include="Elsa.Persistence.Dapper" />
-        <PackageReference Include="Elsa.Persistence.MongoDb" />
-        <PackageReference Include="Elsa.Retention" />
-        <PackageReference Include="Elsa.Scheduling.Hangfire" />
-        <PackageReference Include="Elsa.Scheduling.Quartz" />
-        <PackageReference Include="Elsa.Scheduling.Quartz.EFCore.MySql" />
-        <PackageReference Include="Elsa.Scheduling.Quartz.EFCore.PostgreSql" />
-        <PackageReference Include="Elsa.Scheduling.Quartz.EFCore.Sqlite" />
-        <PackageReference Include="Elsa.Scheduling.Quartz.EFCore.SqlServer" />
-        <PackageReference Include="Elsa.ServiceBus.AzureServiceBus" />
-        <PackageReference Include="Elsa.ServiceBus.MassTransit" />
-        <PackageReference Include="Elsa.ServiceBus.MassTransit.AzureServiceBus" />
-        <PackageReference Include="Elsa.ServiceBus.MassTransit.RabbitMq" />
-        <PackageReference Include="Elsa.Workflows.Runtime.ProtoActor" />
-        <PackageReference Include="Elsa.WorkflowContexts" />
+        <PackageReference Include="Elsa.Actors.ProtoActor"/>
+        <PackageReference Include="Elsa.Alterations.MassTransit"/>
+        <PackageReference Include="Elsa.Caching.Distributed.MassTransit"/>
+        <PackageReference Include="Elsa.Caching.Distributed.ProtoActor"/>
+        <PackageReference Include="Elsa.Caching.Distributed"/>
+        <PackageReference Include="Elsa.OpenTelemetry"/>
+        <PackageReference Include="Elsa.DropIns"/>
+        <PackageReference Include="Elsa.Email"/>
+        <PackageReference Include="Elsa.Http.Webhooks"/>
+        <PackageReference Include="Elsa.Persistence.Dapper.Migrations"/>
+        <PackageReference Include="Elsa.Persistence.Dapper"/>
+        <PackageReference Include="Elsa.Persistence.MongoDb"/>
+        <PackageReference Include="Elsa.Retention"/>
+        <PackageReference Include="Elsa.Scheduling.Hangfire"/>
+        <PackageReference Include="Elsa.Scheduling.Quartz"/>
+        <PackageReference Include="Elsa.Scheduling.Quartz.EFCore.MySql"/>
+        <PackageReference Include="Elsa.Scheduling.Quartz.EFCore.PostgreSql"/>
+        <PackageReference Include="Elsa.Scheduling.Quartz.EFCore.Sqlite"/>
+        <PackageReference Include="Elsa.Scheduling.Quartz.EFCore.SqlServer"/>
+        <PackageReference Include="Elsa.ServiceBus.AzureServiceBus"/>
+        <PackageReference Include="Elsa.ServiceBus.MassTransit"/>
+        <PackageReference Include="Elsa.ServiceBus.MassTransit.AzureServiceBus"/>
+        <PackageReference Include="Elsa.ServiceBus.MassTransit.RabbitMq"/>
+        <PackageReference Include="Elsa.Workflows.Runtime.ProtoActor"/>
+        <PackageReference Include="Elsa.WorkflowContexts"/>
     </ItemGroup>
-    
+
     <ItemGroup>
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Activities\Elsa.Agents.Activities.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Api\Elsa.Agents.Api.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Core\Elsa.Agents.Core.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.Sqlite\Elsa.Agents.Persistence.EFCore.Sqlite.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore\Elsa.Agents.Persistence.EFCore.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence\Elsa.Agents.Persistence.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\data\Elsa.Data.Csv\Elsa.Data.Csv.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Console\Elsa.Logging.Console.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Core\Elsa.Logging.Core.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Serilog\Elsa.Logging.Serilog.csproj" />
-      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging\Elsa.Logging.csproj" />
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Activities\Elsa.Agents.Activities.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Api\Elsa.Agents.Api.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Core\Elsa.Agents.Core.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.Sqlite\Elsa.Agents.Persistence.EFCore.Sqlite.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore\Elsa.Agents.Persistence.EFCore.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence\Elsa.Agents.Persistence.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\data\Elsa.Data.Csv\Elsa.Data.Csv.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Console\Elsa.Logging.Console.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Core\Elsa.Logging.Core.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Serilog\Elsa.Logging.Serilog.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging\Elsa.Logging.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Agents\"/>
     </ItemGroup>
 
 </Project>

@@ -87,6 +87,17 @@
         <PackageVersion Include="Hangfire.SqlServer" Version="1.8.22"/>
         <PackageVersion Include="Hangfire.Storage.SQLite" Version="0.4.2"/>
         <PackageVersion Include="JetBrains.Annotations" Version="2025.2.4"/>
+        <PackageVersion Include="Microsoft.SemanticKernel" Version="1.68.0"/>
+        <PackageVersion Include="Microsoft.SemanticKernel.Agents.Abstractions" Version="1.68.0" />
+        <PackageVersion Include="Microsoft.SemanticKernel.Agents.Core" Version="1.68.0" />
+        <PackageVersion Include="Microsoft.SemanticKernel.PromptTemplates.Handlebars" Version="1.68.0" />
+        <PackageVersion Include="Microsoft.SemanticKernel.Plugins.Memory" Version="1.68.0-alpha" />
+        <PackageVersion Include="Microsoft.SemanticKernel.Connectors.InMemory" Version="1.68.0-preview" />
+        <PackageVersion Include="Microsoft.Agents.AI.Workflows" Version="1.0.0-preview.251204.1" />
+        <PackageVersion Include="Microsoft.Extensions.AI" Version="10.1.0" />
+        <PackageVersion Include="Microsoft.Agents.AI" Version="1.0.0-preview.251204.1" />
+        <PackageVersion Include="Microsoft.Extensions.AI.OpenAI" Version="10.1.0-preview.1.25608.1" />
+        <PackageVersion Include="Azure.AI.OpenAI" Version="2.7.0-beta.2" />
         <PackageVersion Include="Proto.Cluster.Kubernetes" Version="1.8.0"/>
         <PackageVersion Include="Proto.Persistence.Sqlite" Version="1.8.0"/>
         <PackageVersion Include="Proto.Persistence.SqlServer" Version="1.8.0"/>
