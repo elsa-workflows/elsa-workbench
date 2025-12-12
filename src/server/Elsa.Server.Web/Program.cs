@@ -32,6 +32,7 @@ using Elsa.Persistence.MongoDb.Modules.Tenants;
 using Elsa.Retention.Extensions;
 using Elsa.Retention.Models;
 using Elsa.Server.Web;
+using Elsa.Server.Web.Agents;
 using Elsa.Server.Web.Extensions;
 using Elsa.Server.Web.Filters;
 using Elsa.Server.Web.Models;
@@ -532,6 +533,10 @@ services
             .UseAgentsApi()
             .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
 
+        services.AddOpenAIChatClient("gpt-4o-mini", apiKey: configuration.GetValue<string>("GITHUB_TOKEN"));
+        services.AddScoped<CopyWriterAndEditorAgent>();
+        services.Configure<CodeFirstAgentOptions>(options => options.AddAgent<CopyWriterAndEditorAgent>());
+        
         if (useQuartz)
         {
             elsa.UseQuartz(quartz =>
