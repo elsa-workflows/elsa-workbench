@@ -49,7 +49,10 @@ public class CopyWriterAndEditorAgent(IChatClient chatClient, ILoggerFactory log
         var workflowAgent = workflow.AsAgent();
         var cancellationToken = context.CancellationToken;
         var response = await workflowAgent.RunAsync(cancellationToken: cancellationToken);
-        return new AgentExecutionResponse();
+        return new AgentExecutionResponse
+        {
+            Text = response.Text
+        };
     }
 }
 

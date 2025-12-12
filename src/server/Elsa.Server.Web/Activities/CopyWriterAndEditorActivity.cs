@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Elsa.Agents;
 using Elsa.Workflows;
 using Elsa.Extensions;
+using Elsa.Server.Web.Agents;
 using Elsa.Workflows.Attributes;
 using Elsa.Workflows.Models;
 
@@ -25,7 +26,10 @@ public class CopyWriterAndEditorActivity : CodeActivity<string>
         var author = context.Get(Author);
         var agentResolver = context.GetRequiredService<IAgentResolver>();
         
-        var agent = await agentResolver.ResolveAsync("CopyWriterAndEditorAgent", cancellationToken);
+        var agent = (CopyWriterAndEditorAgent)await agentResolver.ResolveAsync("CopyWriterAndEditorAgent", cancellationToken);
+        agent.Author = author;
+        agent.Genre = genre;
+        agent.Topic = topic;
         var agentExecutionContext = new AgentExecutionContext
         {
             Message = $"Write a short story about {topic} in the genre of {genre}.",
