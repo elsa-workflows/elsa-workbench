@@ -18,7 +18,7 @@ public class CopyWriterAndEditorAgent(IChatClient chatClient, ILoggerFactory log
         // Local tools for the writer agent.
         string GetAuthor() => Author;
         string FormatStory(string title, string a, string story) => $"Title: {title}\nAuthor: {a}\n\n{story}";
-
+        
         var writer = new ChatClientAgent(
             chatClient,
             new()
@@ -36,19 +36,22 @@ public class CopyWriterAndEditorAgent(IChatClient chatClient, ILoggerFactory log
             },
             loggerFactory);
 
-        var editor = new ChatClientAgent(
-            chatClient,
+        var editor = chatClient.CreateAIAgent(
             new()
             {
                 Name = "Editor",
-                ChatOptions = new() { Instructions = "Make the story more engaging, fix grammar, and enhance the plot." }
+                ChatOptions = new()
+                {
+                    
+                    Instructions = "Make the story more engaging, fix grammar, and enhance the plot."
+                }
             },
             loggerFactory);
 
-        var workflow = AgentWorkflowBuilder.BuildSequential(writer, editor);
-        var workflowAgent = workflow.AsAgent();
+        var narrativeOrchestrator = AgentWorkflowBuilder.BuildSequential(writer, editor);
+        var narrativeOrchestratorAgent = narrativeOrchestrator.AsAgent();
         var cancellationToken = context.CancellationToken;
-        var response = await workflowAgent.RunAsync($"Write a story about {Topic} in the genre of {Genre} written by {Author}.", cancellationToken: cancellationToken);
+        var response = await narrativeOrchestratorAgent.RunAsync($"Write a story about {Topic} in the genre of {Genre} written by {Author}.", cancellationToken: cancellationToken);
         return new AgentExecutionResponse
         {
             Text = response.Text

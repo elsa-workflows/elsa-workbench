@@ -24,9 +24,9 @@ public class CopyWriterAndEditorActivity : CodeActivity<string>
         var genre = context.Get(Genre);
         var topic = context.Get(Topic);
         var author = context.Get(Author);
-        var agentResolver = context.GetRequiredService<IAgentResolver>();
+        var agentResolver = context.GetRequiredService<ICodeFirstAgentResolver>();
         
-        var agent = (CopyWriterAndEditorAgent)await agentResolver.ResolveAsync("CopyWriterAndEditorAgent", cancellationToken);
+        var agent = await agentResolver.ResolveAsync<CopyWriterAndEditorAgent>(cancellationToken);
         agent.Author = author;
         agent.Genre = genre;
         agent.Topic = topic;
