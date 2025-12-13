@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Text.Encodings.Web;
 using Elsa.Agents;
+using Elsa.Agents.OpenAI;
 using Elsa.Agents.Persistence.EFCore;
 using Elsa.Alterations.Extensions;
 using Elsa.Alterations.MassTransit.Extensions;
@@ -534,11 +535,7 @@ services
             .UseWorkflowContexts()
             .UseLoggingFramework(logging => logging.UseConsole())
             .UseAgents(agents => agents
-                .AddServiceDescriptor(new()
-                {
-                    Name = "OpenAI Chat Completion",
-                    ConfigureKernel = kernel => kernel.Services.AddOpenAIChatCompletion("gpt-4o-mini", apiKey: openAIApiKey)
-                })
+                .AddOpenAIChatCompletion("gpt-4o-mini", openAIApiKey)
                 .AddServiceDescriptor(new ()
                 {
                     Name = "",

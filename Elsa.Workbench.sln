@@ -340,6 +340,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Persistence.EFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Persistence.EFCore.SqlServer", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.SqlServer\Elsa.Agents.Persistence.EFCore.SqlServer.csproj", "{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.AzureOpenAI", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.AzureOpenAI\Elsa.Agents.AzureOpenAI.csproj", "{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -846,6 +848,10 @@ Global
 		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1005,6 +1011,7 @@ Global
 		{557BC490-DB3F-4513-9583-DC686FF75707} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 		{8A966B5C-FD15-46C9-B726-E60261BE3B83} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
+		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {121DEFAC-DAA4-4F25-BEA9-92D24660F80D}

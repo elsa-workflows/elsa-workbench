@@ -1,6 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Elsa.Agents;
+using Elsa.Server.Web.Activities;
 using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
 using Microsoft.Extensions.AI;
@@ -11,6 +12,8 @@ namespace Elsa.Server.Web.Agents;
 /// <summary>
 /// Represents an AI-driven story-writing agent that leverages an external chat client
 /// to generate stories based on the specified author, topic, and genre.
+/// This agent is completely unrelated to Elsa and can be instantiated and executed by any component.
+/// Including the <see cref="WriteStory"/> sample activity.
 /// </summary>
 public class NativeStoryWriterAgent(IChatClient chatClient, ILoggerFactory loggerFactory)
 {
