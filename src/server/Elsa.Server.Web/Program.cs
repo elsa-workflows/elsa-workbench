@@ -529,15 +529,14 @@ services
             .UseOpenTelemetry(otel => otel.UseNewRootActivityForRemoteParent = true)
             .UseWorkflowContexts()
             .UseLoggingFramework(logging => logging.UseConsole())
-            .UseAgentActivities()
+            .UseAgents(agents => agents.AddAgent<DecoratedStoryWriterAgent>())
             .UseAgentsApi()
             .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
 
         // Add services to the container.
-        var apiKey = Environment.GetEnvironmentVariable("OPENAI_APIKEY")!;
+        var apiKey = configuration.GetValue<string>("OPENAI_APIKEY")!;
         services.AddOpenAIChatClient("gpt-4o-mini", apiKey: apiKey);
-        services.AddScoped<CopyWriterAndEditorAgent>();
-        services.Configure<CodeFirstAgentOptions>(options => options.AddAgent<CopyWriterAndEditorAgent>());
+        services.AddTransient<NativeStoryWriterAgent>();
         
         if (useQuartz)
         {

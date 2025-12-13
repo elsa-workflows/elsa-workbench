@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Threading.Tasks;
 using Elsa.Agents;
 using Microsoft.Agents.AI;
@@ -7,20 +8,25 @@ using Microsoft.Extensions.Logging;
 
 namespace Elsa.Server.Web.Agents;
 
-public class CopyWriterAndEditorAgent(IChatClient chatClient, ILoggerFactory loggerFactory) : IElsaAgent
+/// <summary>
+/// Represents an AI-driven story-writing agent that leverages an external chat client
+/// to generate stories based on the specified author, topic, and genre.
+/// </summary>
+public class DecoratedStoryWriterAgent(IChatClient chatClient, ILoggerFactory loggerFactory) : IAgent
 {
     public string Author { get; set; }
     public string Topic { get; set; }
     public string Genre { get; set; }
     
-    public async Task<IAgentExecutionResponse> RunAsync(IAgentExecutionContext context)
+    public async Task<AgentRunResponse> RunAsync(AgentExecutionContext context)
     {
+        var cancellationToken = context.CancellationToken;
+        
         // Local tools for the writer agent.
         string GetAuthor() => Author;
         string FormatStory(string title, string a, string story) => $"Title: {title}\nAuthor: {a}\n\n{story}";
         
-        var writer = new ChatClientAgent(
-            chatClient,
+        var writer = chatClient.CreateAIAgent(
             new()
             {
                 Name = "Writer",
@@ -50,12 +56,8 @@ public class CopyWriterAndEditorAgent(IChatClient chatClient, ILoggerFactory log
 
         var narrativeOrchestrator = AgentWorkflowBuilder.BuildSequential(writer, editor);
         var narrativeOrchestratorAgent = narrativeOrchestrator.AsAgent();
-        var cancellationToken = context.CancellationToken;
         var response = await narrativeOrchestratorAgent.RunAsync($"Write a story about {Topic} in the genre of {Genre} written by {Author}.", cancellationToken: cancellationToken);
-        return new AgentExecutionResponse
-        {
-            Text = response.Text
-        };
+        return response;
     }
 }
 

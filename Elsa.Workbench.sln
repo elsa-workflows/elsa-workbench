@@ -330,6 +330,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Data.Csv", "submodules
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Persistence.EFCore.Sqlite", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.Sqlite\Elsa.Agents.Persistence.EFCore.Sqlite.csproj", "{8D33BE78-B7D8-4FEE-9B48-812946991541}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents\Elsa.Agents.csproj", "{90841DD9-8433-443F-B60D-6064266A88E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -816,6 +818,10 @@ Global
 		{8D33BE78-B7D8-4FEE-9B48-812946991541}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D33BE78-B7D8-4FEE-9B48-812946991541}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D33BE78-B7D8-4FEE-9B48-812946991541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90841DD9-8433-443F-B60D-6064266A88E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90841DD9-8433-443F-B60D-6064266A88E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90841DD9-8433-443F-B60D-6064266A88E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90841DD9-8433-443F-B60D-6064266A88E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -970,6 +976,7 @@ Global
 		{DBE82A94-F860-4E47-8ADF-86FB22B8071B} = {BB061A66-45B6-4390-8CA4-ED98EFFBA5D3}
 		{ADF55CE4-6488-460B-99D7-DA693BDA437A} = {DBE82A94-F860-4E47-8ADF-86FB22B8071B}
 		{8D33BE78-B7D8-4FEE-9B48-812946991541} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
+		{90841DD9-8433-443F-B60D-6064266A88E0} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {121DEFAC-DAA4-4F25-BEA9-92D24660F80D}
