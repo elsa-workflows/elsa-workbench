@@ -334,6 +334,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents", "submodules\e
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.OpenAI", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.OpenAI\Elsa.Agents.OpenAI.csproj", "{E8DBD437-596D-4F57-9F08-47E40F1F4ADD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Persistence.EFCore.MySql", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.MySql\Elsa.Agents.Persistence.EFCore.MySql.csproj", "{557BC490-DB3F-4513-9583-DC686FF75707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Persistence.EFCore.PostgreSql", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.PostgreSql\Elsa.Agents.Persistence.EFCore.PostgreSql.csproj", "{8A966B5C-FD15-46C9-B726-E60261BE3B83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Persistence.EFCore.SqlServer", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.SqlServer\Elsa.Agents.Persistence.EFCore.SqlServer.csproj", "{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -828,6 +834,18 @@ Global
 		{E8DBD437-596D-4F57-9F08-47E40F1F4ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8DBD437-596D-4F57-9F08-47E40F1F4ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8DBD437-596D-4F57-9F08-47E40F1F4ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{557BC490-DB3F-4513-9583-DC686FF75707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557BC490-DB3F-4513-9583-DC686FF75707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557BC490-DB3F-4513-9583-DC686FF75707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557BC490-DB3F-4513-9583-DC686FF75707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A966B5C-FD15-46C9-B726-E60261BE3B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A966B5C-FD15-46C9-B726-E60261BE3B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A966B5C-FD15-46C9-B726-E60261BE3B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A966B5C-FD15-46C9-B726-E60261BE3B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -984,6 +1002,9 @@ Global
 		{8D33BE78-B7D8-4FEE-9B48-812946991541} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 		{90841DD9-8433-443F-B60D-6064266A88E0} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 		{E8DBD437-596D-4F57-9F08-47E40F1F4ADD} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
+		{557BC490-DB3F-4513-9583-DC686FF75707} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
+		{8A966B5C-FD15-46C9-B726-E60261BE3B83} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
+		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {121DEFAC-DAA4-4F25-BEA9-92D24660F80D}
