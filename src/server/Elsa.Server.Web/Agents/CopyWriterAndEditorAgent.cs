@@ -48,7 +48,7 @@ public class CopyWriterAndEditorAgent(IChatClient chatClient, ILoggerFactory log
         var workflow = AgentWorkflowBuilder.BuildSequential(writer, editor);
         var workflowAgent = workflow.AsAgent();
         var cancellationToken = context.CancellationToken;
-        var response = await workflowAgent.RunAsync(cancellationToken: cancellationToken);
+        var response = await workflowAgent.RunAsync($"Write a story about {Topic} in the genre of {Genre} written by {Author}.", cancellationToken: cancellationToken);
         return new AgentExecutionResponse
         {
             Text = response.Text

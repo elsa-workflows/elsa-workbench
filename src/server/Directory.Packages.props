@@ -97,6 +97,7 @@
         <PackageVersion Include="Microsoft.Extensions.AI" Version="10.1.0" />
         <PackageVersion Include="Microsoft.Agents.AI" Version="1.0.0-preview.251204.1" />
         <PackageVersion Include="Microsoft.Extensions.AI.OpenAI" Version="10.1.0-preview.1.25608.1" />
+        <PackageVersion Include="Microsoft.Agents.AI.Hosting" Version="1.0.0-preview.251204.1" />
         <PackageVersion Include="Azure.AI.OpenAI" Version="2.7.0-beta.2" />
         <PackageVersion Include="Proto.Cluster.Kubernetes" Version="1.8.0"/>
         <PackageVersion Include="Proto.Persistence.Sqlite" Version="1.8.0"/>

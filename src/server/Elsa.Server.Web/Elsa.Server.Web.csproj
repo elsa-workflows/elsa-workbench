@@ -14,8 +14,9 @@
         <PackageReference Include="Microsoft.SemanticKernel.Connectors.InMemory"/>
         <PackageReference Include="Microsoft.Agents.AI.Workflows"/>
         <PackageReference Include="Microsoft.Extensions.AI"/>
-        <PackageReference Include="Microsoft.Agents.AI"/>
         <PackageReference Include="Microsoft.Extensions.AI.OpenAI"/>
+        <PackageReference Include="Microsoft.Agents.AI" />
+        <PackageReference Include="Microsoft.Agents.AI.Hosting" />
         <PackageReference Include="Azure.AI.OpenAI"/>
         <PackageReference Include="Proto.Cluster.Kubernetes"/>
         <PackageReference Include="Proto.Persistence.Sqlite"/>

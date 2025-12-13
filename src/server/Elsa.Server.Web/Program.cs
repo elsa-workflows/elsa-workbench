@@ -533,7 +533,9 @@ services
             .UseAgentsApi()
             .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
 
-        services.AddOpenAIChatClient("gpt-4o-mini", apiKey: configuration.GetValue<string>("GITHUB_TOKEN"));
+        // Add services to the container.
+        var apiKey = Environment.GetEnvironmentVariable("OPENAI_APIKEY")!;
+        services.AddOpenAIChatClient("gpt-4o-mini", apiKey: apiKey);
         services.AddScoped<CopyWriterAndEditorAgent>();
         services.Configure<CodeFirstAgentOptions>(options => options.AddAgent<CopyWriterAndEditorAgent>());
         
