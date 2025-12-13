@@ -71,6 +71,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.SemanticKernel;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
@@ -80,6 +81,8 @@ using Proto.Persistence.SqlServer;
 using Proto.Remote;
 using Proto.Remote.GrpcNet;
 using StackExchange.Redis;
+using ServiceDescriptor = Elsa.Agents.ServiceDescriptor;
+#pragma warning disable SKEXP0010
 
 // ReSharper disable RedundantAssignment
 const PersistenceProvider persistenceProvider = PersistenceProvider.EntityFrameworkCore;
@@ -126,6 +129,7 @@ var redisConnectionString = configuration.GetConnectionString("Redis")!;
 var distributedLockProviderName = configuration.GetSection("Runtime:DistributedLocking")["Provider"];
 var appRole = Enum.Parse<ApplicationRole>(configuration["AppRole"] ?? "Default");
 var sqlDatabaseProvider = Enum.Parse<SqlDatabaseProvider>(configuration["DatabaseProvider"] ?? "Sqlite");
+var openAIApiKey = configuration.GetValue<string>("OPENAI_APIKEY")!;
 
 if (useManualOtelInstrumentation)
 {
@@ -529,13 +533,33 @@ services
             .UseOpenTelemetry(otel => otel.UseNewRootActivityForRemoteParent = true)
             .UseWorkflowContexts()
             .UseLoggingFramework(logging => logging.UseConsole())
-            .UseAgents(agents => agents.AddAgent<DecoratedStoryWriterAgent>())
+            .UseAgents(agents => agents
+                .AddServiceDescriptor(new()
+                {
+                    Name = "OpenAI Chat Completion",
+                    ConfigureKernel = kernel => kernel.Services.AddOpenAIChatCompletion("gpt-4o-mini", apiKey: openAIApiKey)
+                })
+                .AddServiceDescriptor(new ()
+                {
+                    Name = "",
+                    ConfigureKernel = kernel => kernel.AddOpenAITextToImage("", modelId: "")
+                })
+                .AddServiceDescriptor(new()
+                {
+                    Name = "OpenAIEmbeddingGenerator",
+                    ConfigureKernel = kernel =>
+                    {
+                        kernel.Services.AddInMemoryVectorStore();
+                        kernel.AddOpenAIEmbeddingGenerator("some-model","some-api-key");
+                    }
+                })
+                .AddAgent<DecoratedStoryWriterAgent>()
+            )
             .UseAgentsApi()
             .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
 
         // Add services to the container.
-        var apiKey = configuration.GetValue<string>("OPENAI_APIKEY")!;
-        services.AddOpenAIChatClient("gpt-4o-mini", apiKey: apiKey);
+        services.AddOpenAIChatClient("gpt-4o-mini", apiKey: openAIApiKey);
         services.AddTransient<NativeStoryWriterAgent>();
         
         if (useQuartz)

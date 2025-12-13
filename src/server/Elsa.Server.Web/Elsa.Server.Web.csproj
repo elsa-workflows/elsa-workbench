@@ -183,6 +183,7 @@
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Api\Elsa.Agents.Api.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Core\Elsa.Agents.Core.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Models\Elsa.Agents.Models.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.OpenAI\Elsa.Agents.OpenAI.csproj" />
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore.Sqlite\Elsa.Agents.Persistence.EFCore.Sqlite.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence.EFCore\Elsa.Agents.Persistence.EFCore.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Agents.Persistence\Elsa.Agents.Persistence.csproj"/>
