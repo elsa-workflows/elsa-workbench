@@ -6,8 +6,8 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <ElsaVersion>3.6.0-preview.3976</ElsaVersion>
-        <ElsaStudioVersion>3.6.0-preview.1286</ElsaStudioVersion>
+        <ElsaVersion>3.6.0-preview.4036</ElsaVersion>
+        <ElsaStudioVersion>3.6.0-preview.1297</ElsaStudioVersion>
         <ElsaExtensionsVersion>3.6.0-preview.177</ElsaExtensionsVersion>
     </PropertyGroup>
 
