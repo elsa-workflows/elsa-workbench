@@ -18,7 +18,7 @@ public class DecoratedStoryWriterAgent(IChatClient chatClient, ILoggerFactory lo
     public string Topic { get; set; }
     public string Genre { get; set; }
     
-    public async Task<AgentRunResponse> RunAsync(AgentExecutionContext context)
+    public async Task<AgentRunResponse> WriteAsync(AgentExecutionContext context)
     {
         var cancellationToken = context.CancellationToken;
         
