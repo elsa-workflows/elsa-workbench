@@ -3,7 +3,6 @@ using System.IO;
 using System.Text.Encodings.Web;
 using Elsa.Agents;
 using Elsa.Agents.OpenAI;
-using Elsa.Agents.Persistence.EFCore;
 using Elsa.Alterations.Extensions;
 using Elsa.Alterations.MassTransit.Extensions;
 using Elsa.Caching.Options;
@@ -80,9 +79,8 @@ using Proto.Cluster.Kubernetes;
 using Proto.Persistence.Sqlite;
 using Proto.Persistence.SqlServer;
 using Proto.Remote;
-using Proto.Remote.GrpcNet;
 using StackExchange.Redis;
-using ServiceDescriptor = Elsa.Agents.ServiceDescriptor;
+
 #pragma warning disable SKEXP0010
 
 // ReSharper disable RedundantAssignment

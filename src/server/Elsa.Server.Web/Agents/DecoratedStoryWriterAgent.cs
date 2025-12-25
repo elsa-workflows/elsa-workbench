@@ -12,7 +12,7 @@ namespace Elsa.Server.Web.Agents;
 /// to generate stories based on the specified author, topic, and genre.
 /// Implement <see cref="IAgent"/> is optional, but when doing so, it can be automatically used as an activity from Elsa.
 /// </summary>
-public class DecoratedStoryWriterAgent(IChatClient chatClient, ILoggerFactory loggerFactory) : IAgent
+public class DecoratedStoryWriterAgent(IChatClient chatClient, ILoggerFactory loggerFactory)
 {
     public string Author { get; set; }
     public string Topic { get; set; }
