@@ -548,7 +548,6 @@ services
                         kernel.AddOpenAIEmbeddingGenerator("some-model","some-api-key");
                     }
                 })
-                .AddAgent<DecoratedStoryWriterAgent>()
             )
             .UseAgentsApi()
             .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
