@@ -196,4 +196,8 @@
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging\Elsa.Logging.csproj"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="HostMethodActivities\" />
+    </ItemGroup>
+
 </Project>
