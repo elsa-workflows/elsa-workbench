@@ -1,6 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Elsa.Agents;
+using JetBrains.Annotations;
 using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
 using Microsoft.Extensions.AI;
@@ -13,15 +14,14 @@ namespace Elsa.Server.Web.Agents;
 /// to generate stories based on the specified author, topic, and genre.
 /// Implement <see cref="IAgent"/> is optional, but when doing so, it can be automatically used as an activity from Elsa.
 /// </summary>
+[UsedImplicitly]
 public class DecoratedStoryWriterAgent(IChatClient chatClient, ILoggerFactory loggerFactory)
 {
     public string Author { get; set; }
-    public string Topic { get; set; }
-    public string Genre { get; set; }
     
     public Task<string> ContemplateAsync(string story) => Task.FromResult(story);
     
-    public async Task<AgentRunResponse> WriteAsync(CancellationToken cancellationToken)
+    public async Task<AgentRunResponse> WriteAsync(string topic, string genre, CancellationToken cancellationToken)
     {
         // Local tools for the writer agent.
         string GetAuthor() => Author;
@@ -57,7 +57,7 @@ public class DecoratedStoryWriterAgent(IChatClient chatClient, ILoggerFactory lo
 
         var narrativeOrchestrator = AgentWorkflowBuilder.BuildSequential(writer, editor);
         var narrativeOrchestratorAgent = narrativeOrchestrator.AsAgent();
-        var response = await narrativeOrchestratorAgent.RunAsync($"Write a story about {Topic} in the genre of {Genre} written by {Author}.", cancellationToken: cancellationToken);
+        var response = await narrativeOrchestratorAgent.RunAsync($"Write a story about {topic} in the genre of {genre} written by {Author}.", cancellationToken: cancellationToken);
         return response;
     }
 }
