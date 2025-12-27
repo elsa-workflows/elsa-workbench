@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Threading.Tasks;
 using Elsa.Agents;
 using Microsoft.Agents.AI;
@@ -20,10 +21,8 @@ public class DecoratedStoryWriterAgent(IChatClient chatClient, ILoggerFactory lo
     
     public Task<string> ContemplateAsync(string story) => Task.FromResult(story);
     
-    public async Task<AgentRunResponse> WriteAsync(AgentExecutionContext context)
+    public async Task<AgentRunResponse> WriteAsync(CancellationToken cancellationToken)
     {
-        var cancellationToken = context.CancellationToken;
-        
         // Local tools for the writer agent.
         string GetAuthor() => Author;
         string FormatStory(string title, string a, string story) => $"Title: {title}\nAuthor: {a}\n\n{story}";
