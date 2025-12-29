@@ -548,7 +548,6 @@ services
                         kernel.AddOpenAIEmbeddingGenerator("some-model","some-api-key");
                     }
                 })
-                .AddAgent<DecoratedStoryWriterAgent>()
             )
             .UseAgentsApi()
             .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
@@ -720,6 +719,8 @@ services
             });
         }
 
+        elsa.AddActivityHost<DecoratedStoryWriterAgent>();
+        elsa.AddActivityHost<ResumableAgent>();
         elsa.UseCsv();
         elsa.UseWebhooks(webhooks => webhooks.ConfigureSinks += options => builder.Configuration.GetSection("Webhooks").Bind(options));
         elsa.InstallDropIns(options => options.DropInRootDirectory = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", "DropIns"));
