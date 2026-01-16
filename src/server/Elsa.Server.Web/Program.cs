@@ -44,6 +44,7 @@ using Elsa.Sql.Sqlite;
 using Elsa.Sql.SqlServer;
 using Elsa.Tenants.AspNetCore;
 using Elsa.Tenants.Extensions;
+using Elsa.WorkflowProviders.BlobStorage.ElsaScript.Extensions;
 using Elsa.Workflows;
 using Elsa.Workflows.Api;
 using Elsa.Workflows.CommitStates.Strategies;
@@ -432,6 +433,8 @@ services
             {
                 api.AddFastEndpointsAssembly<Program>();
             })
+            .UseFluentStorageProvider()
+            //.UseElsaScriptBlobStorage()
             .UseCSharp(options =>
             {
                 options.DisableWrappers = disableVariableWrappers;
