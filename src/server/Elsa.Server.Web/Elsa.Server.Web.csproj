@@ -40,6 +40,7 @@
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Alterations\Elsa.Alterations.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Caching\Elsa.Caching.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Common\Elsa.Common.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Dsl.ElsaScript\Elsa.Dsl.ElsaScript.csproj" />
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Expressions.CSharp\Elsa.Expressions.CSharp.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Expressions.JavaScript.Libraries\Elsa.Expressions.JavaScript.Libraries.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Expressions.JavaScript\Elsa.Expressions.JavaScript.csproj"/>
@@ -65,6 +66,7 @@
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Tenants.AspNetCore\Elsa.Tenants.AspNetCore.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Tenants\Elsa.Tenants.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.WorkflowProviders.BlobStorage\Elsa.WorkflowProviders.BlobStorage.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.WorkflowProviders.BlobStorage.ElsaScript\Elsa.WorkflowProviders.BlobStorage.ElsaScript.csproj" />
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Workflows.Api\Elsa.Workflows.Api.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Workflows.Core\Elsa.Workflows.Core.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-core\src\modules\Elsa.Workflows.Management\Elsa.Workflows.Management.csproj"/>
@@ -115,6 +117,7 @@
         <PackageReference Include="Elsa.Mediator"/>
         <PackageReference Include="Elsa.Caching"/>
         <PackageReference Include="Elsa.Common"/>
+        <PackageReference Include="Elsa.Dsl.ElsaScript"/>
         <PackageReference Include="Elsa.Expressions.CSharp"/>
         <PackageReference Include="Elsa.Expressions.JavaScript.Libraries"/>
         <PackageReference Include="Elsa.Expressions.JavaScript"/>
@@ -145,6 +148,7 @@
         <PackageReference Include="Elsa.Tenants.AspNetCore"/>
         <PackageReference Include="Elsa.Tenants"/>
         <PackageReference Include="Elsa.WorkflowProviders.BlobStorage"/>
+        <PackageReference Include="Elsa.WorkflowProviders.BlobStorage.ElsaScript"/>
         <PackageReference Include="Elsa.Workflows.Api"/>
         <PackageReference Include="Elsa.Workflows.Core"/>
         <PackageReference Include="Elsa.Workflows.Management"/>
@@ -197,7 +201,13 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="HostMethodActivities\" />
+      <Folder Include="Workflows\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Workflows\hello-world.elsa">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>
