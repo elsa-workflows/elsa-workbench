@@ -201,10 +201,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Workflows\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Update="Workflows\hello-world.elsa">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
