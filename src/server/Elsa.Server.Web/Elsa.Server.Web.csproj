@@ -1,6 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <ItemGroup>
+        <PackageReference Include="FluentMigrator" />
+        <PackageReference Include="FluentMigrator.Runner.SQLite" />
+        <PackageReference Include="FluentMigrator.Runner.SqlServer" />
         <PackageReference Include="DistributedLock"/>
         <PackageReference Include="Hangfire"/>
         <PackageReference Include="Hangfire.MemoryStorage"/>
