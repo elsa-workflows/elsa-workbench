@@ -11,6 +11,7 @@
         <PackageVersion Include="Elsa.Api.Common" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Caching" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Common" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.Dsl.ElsaScript" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Expressions" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Expressions.CSharp" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Expressions.Python" Version="$(ElsaVersion)"/>
@@ -42,6 +43,7 @@
         <PackageVersion Include="Elsa.Workflows.Runtime" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.Workflows.Runtime.Distributed" Version="$(ElsaVersion)"/>
         <PackageVersion Include="Elsa.WorkflowProviders.BlobStorage" Version="$(ElsaVersion)"/>
+        <PackageVersion Include="Elsa.WorkflowProviders.BlobStorage.ElsaScript" Version="$(ElsaVersion)"/>
     </ItemGroup>
     <ItemGroup Label="Elsa Extensions">
         <PackageVersion Include="Elsa.Actors.ProtoActor" Version="$(ElsaExtensionsVersion)"/>
@@ -81,6 +83,7 @@
         <PackageVersion Include="Elsa.Studio.Login.BlazorWasm" Version="$(ElsaStudioVersion)"/>
     </ItemGroup>
     <ItemGroup>
+        <PackageVersion Include="DistributedLock" Version="2.7.1"/>
         <PackageVersion Include="Hangfire" Version="1.8.22"/>
         <PackageVersion Include="Hangfire.MemoryStorage" Version="1.8.1.2"/>
         <PackageVersion Include="Hangfire.PostgreSql" Version="1.20.12"/>

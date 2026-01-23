@@ -3,7 +3,6 @@ using System.IO;
 using System.Text.Encodings.Web;
 using Elsa.Agents;
 using Elsa.Agents.OpenAI;
-using Elsa.Agents.Persistence.EFCore;
 using Elsa.Alterations.Extensions;
 using Elsa.Alterations.MassTransit.Extensions;
 using Elsa.Caching.Options;
@@ -45,6 +44,7 @@ using Elsa.Sql.Sqlite;
 using Elsa.Sql.SqlServer;
 using Elsa.Tenants.AspNetCore;
 using Elsa.Tenants.Extensions;
+using Elsa.WorkflowProviders.BlobStorage.ElsaScript.Extensions;
 using Elsa.Workflows;
 using Elsa.Workflows.Api;
 using Elsa.Workflows.CommitStates.Strategies;
@@ -80,9 +80,8 @@ using Proto.Cluster.Kubernetes;
 using Proto.Persistence.Sqlite;
 using Proto.Persistence.SqlServer;
 using Proto.Remote;
-using Proto.Remote.GrpcNet;
 using StackExchange.Redis;
-using ServiceDescriptor = Elsa.Agents.ServiceDescriptor;
+
 #pragma warning disable SKEXP0010
 
 // ReSharper disable RedundantAssignment
@@ -434,6 +433,8 @@ services
             {
                 api.AddFastEndpointsAssembly<Program>();
             })
+            .UseFluentStorageProvider()
+            //.UseElsaScriptBlobStorage()
             .UseCSharp(options =>
             {
                 options.DisableWrappers = disableVariableWrappers;
@@ -550,7 +551,6 @@ services
                         kernel.AddOpenAIEmbeddingGenerator("some-model","some-api-key");
                     }
                 })
-                .AddAgent<DecoratedStoryWriterAgent>()
             )
             .UseAgentsApi()
             .UseAgentPersistence(persistence => persistence.UseEntityFrameworkCore(ef => ef.UseSqlite(sp => sp.GetSqliteConnectionString())));
@@ -722,6 +722,8 @@ services
             });
         }
 
+        elsa.AddActivityHost<DecoratedStoryWriterAgent>();
+        elsa.AddActivityHost<ResumableAgent>();
         elsa.UseCsv();
         elsa.UseWebhooks(webhooks => webhooks.ConfigureSinks += options => builder.Configuration.GetSection("Webhooks").Bind(options));
         elsa.InstallDropIns(options => options.DropInRootDirectory = Path.Combine(Directory.GetCurrentDirectory(), "App_Data", "DropIns"));

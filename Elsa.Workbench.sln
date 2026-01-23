@@ -342,6 +342,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.Persistence.EFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Agents.AzureOpenAI", "submodules\elsa-extensions\src\modules\agents\Elsa.Agents.AzureOpenAI\Elsa.Agents.AzureOpenAI.csproj", "{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Dsl.ElsaScript", "submodules\elsa-core\src\modules\Elsa.Dsl.ElsaScript\Elsa.Dsl.ElsaScript.csproj", "{7E9382E5-006B-4AAF-A989-C79562106026}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.WorkflowProviders.BlobStorage.ElsaScript", "submodules\elsa-core\src\modules\Elsa.WorkflowProviders.BlobStorage.ElsaScript\Elsa.WorkflowProviders.BlobStorage.ElsaScript.csproj", "{435A902B-D286-4227-88B5-96F3577A4224}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -852,6 +856,14 @@ Global
 		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9382E5-006B-4AAF-A989-C79562106026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9382E5-006B-4AAF-A989-C79562106026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9382E5-006B-4AAF-A989-C79562106026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9382E5-006B-4AAF-A989-C79562106026}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435A902B-D286-4227-88B5-96F3577A4224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435A902B-D286-4227-88B5-96F3577A4224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435A902B-D286-4227-88B5-96F3577A4224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435A902B-D286-4227-88B5-96F3577A4224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1012,6 +1024,8 @@ Global
 		{8A966B5C-FD15-46C9-B726-E60261BE3B83} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 		{BF948F19-44FE-46C3-A1A4-CB6663D6BDFE} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
+		{7E9382E5-006B-4AAF-A989-C79562106026} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
+		{435A902B-D286-4227-88B5-96F3577A4224} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {121DEFAC-DAA4-4F25-BEA9-92D24660F80D}

@@ -1,0 +1,7 @@
+use expressions js;
+
+workflow HelloWorldDsl 
+{
+  WriteLine("Hello World from Elsa DSL!");
+  Event("Event1");
+}
