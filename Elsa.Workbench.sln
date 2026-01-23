@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "elsa-core", "elsa-core", "{
 	ProjectSection(SolutionItems) = preProject
 		submodules\elsa-core\Directory.Build.props = submodules\elsa-core\Directory.Build.props
 		submodules\elsa-core\Directory.Packages.props = submodules\elsa-core\Directory.Packages.props
+		submodules\elsa-core\plan-activityExecutionCallStack.prompt.md = submodules\elsa-core\plan-activityExecutionCallStack.prompt.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa", "submodules\elsa-core\src\modules\Elsa\Elsa.csproj", "{277EF427-127D-4FC6-950C-496338804BD1}"
@@ -345,6 +346,22 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Dsl.ElsaScript", "submodules\elsa-core\src\modules\Elsa.Dsl.ElsaScript\Elsa.Dsl.ElsaScript.csproj", "{7E9382E5-006B-4AAF-A989-C79562106026}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.WorkflowProviders.BlobStorage.ElsaScript", "submodules\elsa-core\src\modules\Elsa.WorkflowProviders.BlobStorage.ElsaScript\Elsa.WorkflowProviders.BlobStorage.ElsaScript.csproj", "{435A902B-D286-4227-88B5-96F3577A4224}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.Abstractions", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.Abstractions\Elsa.Studio.Authentication.Abstractions.csproj", "{718CC33D-9E61-4C64-815D-3477CD563222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.ElsaIdentity", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.ElsaIdentity\Elsa.Studio.Authentication.ElsaIdentity.csproj", "{CCC84272-B613-4FFF-8732-AE93E05A352E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.ElsaIdentity.BlazorServer", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.ElsaIdentity.BlazorServer\Elsa.Studio.Authentication.ElsaIdentity.BlazorServer.csproj", "{40A9326C-E806-4821-AA79-EDE48BBF8B9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.ElsaIdentity.BlazorWasm", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.ElsaIdentity.BlazorWasm\Elsa.Studio.Authentication.ElsaIdentity.BlazorWasm.csproj", "{2D4932CA-2495-4F56-B42A-A1D78A3D50EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.ElsaIdentity.UI", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.ElsaIdentity.UI\Elsa.Studio.Authentication.ElsaIdentity.UI.csproj", "{2D68C3FE-F322-4475-A72C-471772D55106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.OpenIdConnect", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.OpenIdConnect\Elsa.Studio.Authentication.OpenIdConnect.csproj", "{40689499-F7AD-48E0-98C1-1AAA0DFFCC5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.OpenIdConnect.BlazorServer", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.OpenIdConnect.BlazorServer\Elsa.Studio.Authentication.OpenIdConnect.BlazorServer.csproj", "{C8A75DF8-1418-4045-8EC7-09AE7B07445F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.OpenIdConnect.BlazorWasm", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.OpenIdConnect.BlazorWasm\Elsa.Studio.Authentication.OpenIdConnect.BlazorWasm.csproj", "{FF365658-1481-4AC1-8025-CB59D8FD3BFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -864,6 +881,38 @@ Global
 		{435A902B-D286-4227-88B5-96F3577A4224}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{435A902B-D286-4227-88B5-96F3577A4224}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{435A902B-D286-4227-88B5-96F3577A4224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{718CC33D-9E61-4C64-815D-3477CD563222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718CC33D-9E61-4C64-815D-3477CD563222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718CC33D-9E61-4C64-815D-3477CD563222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718CC33D-9E61-4C64-815D-3477CD563222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC84272-B613-4FFF-8732-AE93E05A352E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC84272-B613-4FFF-8732-AE93E05A352E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC84272-B613-4FFF-8732-AE93E05A352E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC84272-B613-4FFF-8732-AE93E05A352E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40A9326C-E806-4821-AA79-EDE48BBF8B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40A9326C-E806-4821-AA79-EDE48BBF8B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40A9326C-E806-4821-AA79-EDE48BBF8B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40A9326C-E806-4821-AA79-EDE48BBF8B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D4932CA-2495-4F56-B42A-A1D78A3D50EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D4932CA-2495-4F56-B42A-A1D78A3D50EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D4932CA-2495-4F56-B42A-A1D78A3D50EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D4932CA-2495-4F56-B42A-A1D78A3D50EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D68C3FE-F322-4475-A72C-471772D55106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D68C3FE-F322-4475-A72C-471772D55106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D68C3FE-F322-4475-A72C-471772D55106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D68C3FE-F322-4475-A72C-471772D55106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40689499-F7AD-48E0-98C1-1AAA0DFFCC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40689499-F7AD-48E0-98C1-1AAA0DFFCC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40689499-F7AD-48E0-98C1-1AAA0DFFCC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40689499-F7AD-48E0-98C1-1AAA0DFFCC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A75DF8-1418-4045-8EC7-09AE7B07445F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A75DF8-1418-4045-8EC7-09AE7B07445F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A75DF8-1418-4045-8EC7-09AE7B07445F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A75DF8-1418-4045-8EC7-09AE7B07445F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF365658-1481-4AC1-8025-CB59D8FD3BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF365658-1481-4AC1-8025-CB59D8FD3BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF365658-1481-4AC1-8025-CB59D8FD3BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF365658-1481-4AC1-8025-CB59D8FD3BFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1026,6 +1075,14 @@ Global
 		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 		{7E9382E5-006B-4AAF-A989-C79562106026} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
 		{435A902B-D286-4227-88B5-96F3577A4224} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
+		{718CC33D-9E61-4C64-815D-3477CD563222} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{CCC84272-B613-4FFF-8732-AE93E05A352E} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{40A9326C-E806-4821-AA79-EDE48BBF8B9C} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{2D4932CA-2495-4F56-B42A-A1D78A3D50EC} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{2D68C3FE-F322-4475-A72C-471772D55106} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{40689499-F7AD-48E0-98C1-1AAA0DFFCC5B} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{C8A75DF8-1418-4045-8EC7-09AE7B07445F} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{FF365658-1481-4AC1-8025-CB59D8FD3BFF} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {121DEFAC-DAA4-4F25-BEA9-92D24660F80D}
