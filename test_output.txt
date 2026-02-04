@@ -1,0 +1,20 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Elsa.Features -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/common/Elsa.Features/bin/Debug/net10.0/Elsa.Features.dll
+  Elsa.Mediator -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/common/Elsa.Mediator/bin/Debug/net10.0/Elsa.Mediator.dll
+  Elsa.Common -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Common/bin/Debug/net10.0/Elsa.Common.dll
+  Elsa.Caching -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Caching/bin/Debug/net10.0/Elsa.Caching.dll
+  Elsa.KeyValues -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.KeyValues/bin/Debug/net10.0/Elsa.KeyValues.dll
+  Elsa.Expressions -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Expressions/bin/Debug/net10.0/Elsa.Expressions.dll
+  Elsa.Workflows.Core -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Workflows.Core/bin/Debug/net10.0/Elsa.Workflows.Core.dll
+  Elsa.Api.Common -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/common/Elsa.Api.Common/bin/Debug/net10.0/Elsa.Api.Common.dll
+  Elsa.Tenants -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Tenants/bin/Debug/net10.0/Elsa.Tenants.dll
+  Elsa.Workflows.Management -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Workflows.Management/bin/Debug/net10.0/Elsa.Workflows.Management.dll
+  Elsa.Expressions.JavaScript -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Expressions.JavaScript/bin/Debug/net10.0/Elsa.Expressions.JavaScript.dll
+  Elsa.Expressions.Liquid -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Expressions.Liquid/bin/Debug/net10.0/Elsa.Expressions.Liquid.dll
+  Elsa.Expressions.CSharp -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Expressions.CSharp/bin/Debug/net10.0/Elsa.Expressions.CSharp.dll
+  Elsa.Workflows.Runtime -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa.Workflows.Runtime/bin/Debug/net10.0/Elsa.Workflows.Runtime.dll
+  Elsa -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/modules/Elsa/bin/Debug/net10.0/Elsa.dll
+  Elsa.Testing.Shared -> /Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/src/common/Elsa.Testing.Shared/bin/Debug/net10.0/Elsa.Testing.Shared.dll
+/Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/test/unit/Elsa.Workflows.Core.UnitTests/Extensions/ActivityExecutionContextExtensions/ExecutionChainTests.cs(18,52): error CS0246: The type or namespace name 'ISystemClock' could not be found (are you missing a using directive or an assembly reference?) [/Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/test/unit/Elsa.Workflows.Core.UnitTests/Elsa.Workflows.Core.UnitTests.csproj]
+/Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/test/unit/Elsa.Workflows.Core.UnitTests/Extensions/ActivityExecutionContextExtensions/ExecutionChainTests.cs(48,52): error CS0246: The type or namespace name 'ISystemClock' could not be found (are you missing a using directive or an assembly reference?) [/Users/sipke/Projects/Elsa/elsa-workbench/3.6.0/submodules/elsa-core/test/unit/Elsa.Workflows.Core.UnitTests/Elsa.Workflows.Core.UnitTests.csproj]
