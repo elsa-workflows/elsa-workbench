@@ -5,6 +5,6 @@ namespace Elsa.Studio.Web
     /// <inheritdoc />
     public class StudioBrandingProvider : DefaultBrandingProvider
     {
-        public override string AppName => "Elsa Preview";
+        public override string AppName => "Elsa Studio";
     }
 }
