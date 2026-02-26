@@ -2,6 +2,8 @@
 
     <ItemGroup>
         <PackageReference Include="DistributedLock"/>
+        <PackageReference Include="FluentMigrator.Runner.SQLite"/>
+        <PackageReference Include="FluentMigrator.Runner.SqlServer"/>
         <PackageReference Include="Hangfire"/>
         <PackageReference Include="Hangfire.MemoryStorage"/>
         <PackageReference Include="Hangfire.PostgreSql"/>

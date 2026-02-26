@@ -57,6 +57,7 @@ using Elsa.Workflows.Runtime.Distributed.Extensions;
 using Elsa.Workflows.Runtime.Options;
 using Elsa.Workflows.Runtime.Stores;
 using Elsa.Workflows.Runtime.Tasks;
+using FluentMigrator.Runner;
 using Hangfire;
 using Hangfire.MemoryStorage;
 using Hangfire.PostgreSql;
@@ -179,9 +180,9 @@ services
                 dapper.UseMigrations(feature =>
                 {
                     if (sqlDatabaseProvider == SqlDatabaseProvider.SqlServer)
-                        feature.UseSqlServer();
+                        feature.ConfigureRunner += runner => runner.AddSqlServer();
                     else
-                        feature.UseSqlite();
+                        feature.ConfigureRunner += runner => runner.AddSQLite();
                 });
                 dapper.DbConnectionProvider = sp =>
                 {

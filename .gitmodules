@@ -7,3 +7,6 @@
 [submodule "submodules/elsa-extensions"]
 	path = submodules/elsa-extensions
 	url = https://github.com/elsa-workflows/elsa-extensions.git
+[submodule "submodules/webhooks-core"]
+	path = submodules/webhooks-core
+	url = https://github.com/sfmskywalker/webhooks-core.git

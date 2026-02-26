@@ -346,6 +346,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Dsl.ElsaScript", "subm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.WorkflowProviders.BlobStorage.ElsaScript", "submodules\elsa-core\src\modules\Elsa.WorkflowProviders.BlobStorage.ElsaScript\Elsa.WorkflowProviders.BlobStorage.ElsaScript.csproj", "{435A902B-D286-4227-88B5-96F3577A4224}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "webhooks-core", "webhooks-core", "{E8A6183D-04A2-43CA-9985-46E728184BE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebhooksCore.Shared", "submodules\webhooks-core\src\WebhooksCore.Shared\WebhooksCore.Shared.csproj", "{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebhooksCore", "submodules\webhooks-core\src\WebhooksCore\WebhooksCore.csproj", "{962B9D73-3C18-432D-9C4B-232D7350BFEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -864,6 +870,14 @@ Global
 		{435A902B-D286-4227-88B5-96F3577A4224}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{435A902B-D286-4227-88B5-96F3577A4224}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{435A902B-D286-4227-88B5-96F3577A4224}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{962B9D73-3C18-432D-9C4B-232D7350BFEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{962B9D73-3C18-432D-9C4B-232D7350BFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{962B9D73-3C18-432D-9C4B-232D7350BFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{962B9D73-3C18-432D-9C4B-232D7350BFEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1026,6 +1040,9 @@ Global
 		{96448A4C-FF15-4E4E-B0A2-FAF66EC78CE5} = {06C529BF-2ADD-45B3-A4CE-4FC271A0183B}
 		{7E9382E5-006B-4AAF-A989-C79562106026} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
 		{435A902B-D286-4227-88B5-96F3577A4224} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
+		{E8A6183D-04A2-43CA-9985-46E728184BE5} = {F3AE1CEF-E0C3-4EB5-929E-A2BEA36B5A66}
+		{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED} = {E8A6183D-04A2-43CA-9985-46E728184BE5}
+		{962B9D73-3C18-432D-9C4B-232D7350BFEF} = {E8A6183D-04A2-43CA-9985-46E728184BE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {121DEFAC-DAA4-4F25-BEA9-92D24660F80D}
