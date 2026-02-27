@@ -9,6 +9,8 @@
         <PackageReference Include="Hangfire.PostgreSql"/>
         <PackageReference Include="Hangfire.SqlServer"/>
         <PackageReference Include="Hangfire.Storage.SQLite"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" />
         <PackageReference Include="Microsoft.SemanticKernel"/>
         <PackageReference Include="Microsoft.SemanticKernel.Agents.Abstractions"/>
         <PackageReference Include="Microsoft.SemanticKernel.Agents.Core"/>
@@ -210,6 +212,10 @@
       <None Update="Workflows\hello-world.elsa">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Data\Webhooks\Migrations\" />
     </ItemGroup>
 
 </Project>

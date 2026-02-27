@@ -92,6 +92,8 @@
         <PackageVersion Include="Hangfire.SqlServer" Version="1.8.22"/>
         <PackageVersion Include="Hangfire.Storage.SQLite" Version="0.4.2"/>
         <PackageVersion Include="JetBrains.Annotations" Version="2025.2.4"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.3"/>
+        <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.3"/>
         <PackageVersion Include="Microsoft.SemanticKernel" Version="1.68.0"/>
         <PackageVersion Include="Microsoft.SemanticKernel.Agents.Abstractions" Version="1.68.0" />
         <PackageVersion Include="Microsoft.SemanticKernel.Agents.Core" Version="1.68.0" />
