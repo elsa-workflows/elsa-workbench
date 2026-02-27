@@ -12,11 +12,13 @@ using Elsa.Common.RecurringTasks;
 using Elsa.DropIns.Extensions;
 using Elsa.Expressions.Helpers;
 using Elsa.Extensions;
+using Elsa.Http.Webhooks.Persistence.EFCore;
 using Elsa.Identity.Multitenancy;
 using Elsa.Logging.Extensions;
 using Elsa.OpenTelemetry.Middleware;
 using Elsa.Persistence.Dapper.Extensions;
 using Elsa.Persistence.Dapper.Services;
+using Elsa.Persistence.EFCore;
 using Elsa.Persistence.EFCore.Extensions;
 using Elsa.Persistence.EFCore.Modules.Alterations;
 using Elsa.Persistence.EFCore.Modules.Identity;
@@ -172,6 +174,9 @@ if (useManualOtelInstrumentation)
 services
     .AddElsa(elsa =>
     {
+        elsa.ConfigureHostedService<RunMigrationsHostedService<WebhooksDbContext>>(-100);
+        services.AddPooledDbContextFactory<WebhooksDbContext>(db => db.UseElsaSqlite(typeof(Program).Assembly, sqliteConnectionString));
+        
         if (persistenceProvider == PersistenceProvider.MongoDb)
             elsa.UseMongoDb(mongoDbConnectionString);
 
