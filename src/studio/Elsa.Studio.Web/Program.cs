@@ -16,6 +16,7 @@ using Elsa.Studio.Translations;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Elsa.Studio.Branding;
 using Elsa.Studio.Contracts;
+using Elsa.Studio.Http.Webhooks.Extensions;
 using Elsa.Studio.Login.Extensions;
 using Elsa.Studio.Services;
 using Elsa.Studio.Web;
@@ -64,6 +65,7 @@ services.AddScoped<IClientInformationProvider, StaticClientInformationProvider>(
 services.AddShell(options => configuration.GetSection("Shell").Bind(options));
 services.AddRemoteBackend(backendApiConfig);
 services.AddLoginModule();
+services.AddWebhooksModule(backendApiConfig);
 
 var identityProvider = configuration.GetValue<string>("Authentication:Provider");
 
