@@ -20,6 +20,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution", "solution", "{B84481B6-9E04-4BEF-BDF7-5C2280ACD34D}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.targets = Directory.Build.targets
+		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Features", "submodules\elsa-core\src\common\Elsa.Features\Elsa.Features.csproj", "{843679B9-70FB-4FC3-BAC4-1A3842E9ACD0}"
@@ -351,6 +352,40 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebhooksCore.Shared", "submodules\webhooks-core\src\WebhooksCore.Shared\WebhooksCore.Shared.csproj", "{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebhooksCore", "submodules\webhooks-core\src\WebhooksCore\WebhooksCore.csproj", "{962B9D73-3C18-432D-9C4B-232D7350BFEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Http.Webhooks.Abstractions", "submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Abstractions\Elsa.Http.Webhooks.Abstractions.csproj", "{FEB368A6-E606-4BFF-B474-258EC97F0732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Http.Webhooks.Api", "submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Api\Elsa.Http.Webhooks.Api.csproj", "{B0CD5C3D-C03C-41D4-8AFD-324CB5AE0880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Http.Webhooks.Persistence", "submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Persistence\Elsa.Http.Webhooks.Persistence.csproj", "{179F0E84-9FF5-4A09-B3C8-A5F6FE91F8DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Http.Webhooks.Persistence.EFCore", "submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Persistence.EFCore\Elsa.Http.Webhooks.Persistence.EFCore.csproj", "{E85C9720-0D70-4DB6-A36F-043A6E6A6C76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Http.Webhooks.Persistence.MongoDb", "submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Persistence.MongoDb\Elsa.Http.Webhooks.Persistence.MongoDb.csproj", "{9D1CA973-F1E2-4901-8531-8E490DCC560B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Http.Webhooks", "submodules\elsa-extensions\src\modules\http\Elsa.Studio.Http.Webhooks\Elsa.Studio.Http.Webhooks.csproj", "{C1181AA5-D3F4-4D47-8404-D2B44A635E56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6C2D942D-5B3F-436F-9E64-97F38483356B}"
+	ProjectSection(SolutionItems) = preProject
+		submodules\webhooks-core\src\Directory.Build.props = submodules\webhooks-core\src\Directory.Build.props
+		submodules\webhooks-core\src\Directory.Packages.props = submodules\webhooks-core\src\Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.Abstractions", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.Abstractions\Elsa.Studio.Authentication.Abstractions.csproj", "{A14C5FE9-3015-487A-A040-3A2098B0D04B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.ElsaIdentity", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.ElsaIdentity\Elsa.Studio.Authentication.ElsaIdentity.csproj", "{534F4F49-C876-4CE4-9261-3E60500F3BD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.ElsaIdentity.BlazorServer", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.ElsaIdentity.BlazorServer\Elsa.Studio.Authentication.ElsaIdentity.BlazorServer.csproj", "{4CFF1AC6-8349-4448-86C1-39C1A5E25437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.ElsaIdentity.BlazorWasm", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.ElsaIdentity.BlazorWasm\Elsa.Studio.Authentication.ElsaIdentity.BlazorWasm.csproj", "{BD28525E-A713-4D3A-B864-954471AD5E45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.ElsaIdentity.UI", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.ElsaIdentity.UI\Elsa.Studio.Authentication.ElsaIdentity.UI.csproj", "{50002838-0AC6-400A-BB43-3BFFA54A0B13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.OpenIdConnect", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.OpenIdConnect\Elsa.Studio.Authentication.OpenIdConnect.csproj", "{06CF293C-EF1B-4502-BD2E-D568D4626946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.OpenIdConnect.BlazorServer", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.OpenIdConnect.BlazorServer\Elsa.Studio.Authentication.OpenIdConnect.BlazorServer.csproj", "{42E57582-E077-4DBC-97C9-823298CE0A3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elsa.Studio.Authentication.OpenIdConnect.BlazorWasm", "submodules\elsa-studio\src\modules\Elsa.Studio.Authentication.OpenIdConnect.BlazorWasm\Elsa.Studio.Authentication.OpenIdConnect.BlazorWasm.csproj", "{231E2EA1-F394-4531-AF14-588CEBB41098}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -878,6 +913,62 @@ Global
 		{962B9D73-3C18-432D-9C4B-232D7350BFEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{962B9D73-3C18-432D-9C4B-232D7350BFEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{962B9D73-3C18-432D-9C4B-232D7350BFEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEB368A6-E606-4BFF-B474-258EC97F0732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEB368A6-E606-4BFF-B474-258EC97F0732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEB368A6-E606-4BFF-B474-258EC97F0732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEB368A6-E606-4BFF-B474-258EC97F0732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0CD5C3D-C03C-41D4-8AFD-324CB5AE0880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0CD5C3D-C03C-41D4-8AFD-324CB5AE0880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0CD5C3D-C03C-41D4-8AFD-324CB5AE0880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0CD5C3D-C03C-41D4-8AFD-324CB5AE0880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{179F0E84-9FF5-4A09-B3C8-A5F6FE91F8DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179F0E84-9FF5-4A09-B3C8-A5F6FE91F8DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179F0E84-9FF5-4A09-B3C8-A5F6FE91F8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179F0E84-9FF5-4A09-B3C8-A5F6FE91F8DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E85C9720-0D70-4DB6-A36F-043A6E6A6C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85C9720-0D70-4DB6-A36F-043A6E6A6C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85C9720-0D70-4DB6-A36F-043A6E6A6C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85C9720-0D70-4DB6-A36F-043A6E6A6C76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1CA973-F1E2-4901-8531-8E490DCC560B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1CA973-F1E2-4901-8531-8E490DCC560B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1CA973-F1E2-4901-8531-8E490DCC560B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1CA973-F1E2-4901-8531-8E490DCC560B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1181AA5-D3F4-4D47-8404-D2B44A635E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1181AA5-D3F4-4D47-8404-D2B44A635E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1181AA5-D3F4-4D47-8404-D2B44A635E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1181AA5-D3F4-4D47-8404-D2B44A635E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A14C5FE9-3015-487A-A040-3A2098B0D04B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A14C5FE9-3015-487A-A040-3A2098B0D04B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A14C5FE9-3015-487A-A040-3A2098B0D04B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A14C5FE9-3015-487A-A040-3A2098B0D04B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534F4F49-C876-4CE4-9261-3E60500F3BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534F4F49-C876-4CE4-9261-3E60500F3BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534F4F49-C876-4CE4-9261-3E60500F3BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534F4F49-C876-4CE4-9261-3E60500F3BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CFF1AC6-8349-4448-86C1-39C1A5E25437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CFF1AC6-8349-4448-86C1-39C1A5E25437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CFF1AC6-8349-4448-86C1-39C1A5E25437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CFF1AC6-8349-4448-86C1-39C1A5E25437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD28525E-A713-4D3A-B864-954471AD5E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD28525E-A713-4D3A-B864-954471AD5E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD28525E-A713-4D3A-B864-954471AD5E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD28525E-A713-4D3A-B864-954471AD5E45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50002838-0AC6-400A-BB43-3BFFA54A0B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50002838-0AC6-400A-BB43-3BFFA54A0B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50002838-0AC6-400A-BB43-3BFFA54A0B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50002838-0AC6-400A-BB43-3BFFA54A0B13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CF293C-EF1B-4502-BD2E-D568D4626946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CF293C-EF1B-4502-BD2E-D568D4626946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CF293C-EF1B-4502-BD2E-D568D4626946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CF293C-EF1B-4502-BD2E-D568D4626946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E57582-E077-4DBC-97C9-823298CE0A3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E57582-E077-4DBC-97C9-823298CE0A3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E57582-E077-4DBC-97C9-823298CE0A3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E57582-E077-4DBC-97C9-823298CE0A3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231E2EA1-F394-4531-AF14-588CEBB41098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231E2EA1-F394-4531-AF14-588CEBB41098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231E2EA1-F394-4531-AF14-588CEBB41098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231E2EA1-F394-4531-AF14-588CEBB41098}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1041,8 +1132,23 @@ Global
 		{7E9382E5-006B-4AAF-A989-C79562106026} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
 		{435A902B-D286-4227-88B5-96F3577A4224} = {F9AA7C5F-91CE-42FB-B1C3-5F9DFB0621F6}
 		{E8A6183D-04A2-43CA-9985-46E728184BE5} = {F3AE1CEF-E0C3-4EB5-929E-A2BEA36B5A66}
-		{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED} = {E8A6183D-04A2-43CA-9985-46E728184BE5}
-		{962B9D73-3C18-432D-9C4B-232D7350BFEF} = {E8A6183D-04A2-43CA-9985-46E728184BE5}
+		{FEB368A6-E606-4BFF-B474-258EC97F0732} = {F15ADF1B-6B1F-4A09-A6D2-4DCA9DD4F7FF}
+		{B0CD5C3D-C03C-41D4-8AFD-324CB5AE0880} = {F15ADF1B-6B1F-4A09-A6D2-4DCA9DD4F7FF}
+		{179F0E84-9FF5-4A09-B3C8-A5F6FE91F8DE} = {F15ADF1B-6B1F-4A09-A6D2-4DCA9DD4F7FF}
+		{E85C9720-0D70-4DB6-A36F-043A6E6A6C76} = {F15ADF1B-6B1F-4A09-A6D2-4DCA9DD4F7FF}
+		{9D1CA973-F1E2-4901-8531-8E490DCC560B} = {F15ADF1B-6B1F-4A09-A6D2-4DCA9DD4F7FF}
+		{C1181AA5-D3F4-4D47-8404-D2B44A635E56} = {F15ADF1B-6B1F-4A09-A6D2-4DCA9DD4F7FF}
+		{6C2D942D-5B3F-436F-9E64-97F38483356B} = {E8A6183D-04A2-43CA-9985-46E728184BE5}
+		{962B9D73-3C18-432D-9C4B-232D7350BFEF} = {6C2D942D-5B3F-436F-9E64-97F38483356B}
+		{DCD5BE20-4CEB-4D0B-85FC-09A25B3235ED} = {6C2D942D-5B3F-436F-9E64-97F38483356B}
+		{A14C5FE9-3015-487A-A040-3A2098B0D04B} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{534F4F49-C876-4CE4-9261-3E60500F3BD2} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{4CFF1AC6-8349-4448-86C1-39C1A5E25437} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{BD28525E-A713-4D3A-B864-954471AD5E45} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{50002838-0AC6-400A-BB43-3BFFA54A0B13} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{06CF293C-EF1B-4502-BD2E-D568D4626946} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{42E57582-E077-4DBC-97C9-823298CE0A3E} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
+		{231E2EA1-F394-4531-AF14-588CEBB41098} = {747EE30F-6F7A-4C0D-809E-F5B9BFACB0E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {121DEFAC-DAA4-4F25-BEA9-92D24660F80D}

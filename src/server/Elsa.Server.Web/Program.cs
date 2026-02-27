@@ -107,6 +107,7 @@ const bool useSecrets = false;
 const bool disableVariableWrappers = false;
 const bool disableVariableCopying = false;
 const bool useManualOtelInstrumentation = false;
+const bool useWebhooks = true;
 
 ObjectConverter.StrictMode = true;
 

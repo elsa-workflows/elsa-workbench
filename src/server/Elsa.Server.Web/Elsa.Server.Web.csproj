@@ -200,6 +200,10 @@
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Core\Elsa.Logging.Core.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging.Serilog\Elsa.Logging.Serilog.csproj"/>
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\diagnostics\Elsa.Logging\Elsa.Logging.csproj"/>
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Api\Elsa.Http.Webhooks.Api.csproj" />
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Persistence.EFCore\Elsa.Http.Webhooks.Persistence.EFCore.csproj" />
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Persistence.MongoDb\Elsa.Http.Webhooks.Persistence.MongoDb.csproj" />
+        <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\http\Elsa.Http.Webhooks.Persistence\Elsa.Http.Webhooks.Persistence.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -30,4 +30,8 @@
         <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\agents\Elsa.Studio.Agents\Elsa.Studio.Agents.csproj"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\submodules\elsa-extensions\src\modules\http\Elsa.Studio.Http.Webhooks\Elsa.Studio.Http.Webhooks.csproj" />
+    </ItemGroup>
+
 </Project>
